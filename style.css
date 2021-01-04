@@ -1,0 +1,19 @@
+.encabezado{
+    display: inline-block;
+}
+.curso,image {
+    display: inline-block;
+}
+.imagen{
+    margin-left: 20px;
+    width: 200px;
+    height: 200px;
+    float: left;
+}
+.curso{
+    float: right;
+}
+.titulos{
+    width: fit-content;
+    margin: 0 auto;
+}

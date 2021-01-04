@@ -3,8 +3,46 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Inconvenientes con la inplementación</title>
+	<LINK REL=StyleSheet HREF="style.css" TYPE="text/css">
 </head>
 <body>
+	<div class="encabezado">
+		<p> <img class="imagen" src="UNI.png"></p>
+	</div>
+	<h1 class="curso">Administración de Redes</h1>
+	<hr>
+	<div>
+		<h1 class="titulos">Incovenientes con la Implementación</h1>
+		<h2>Sincronización con los distintos proyectos de GNS3</h2>
+		<p>
+		 Para realizar el proyecto Capstone tuvimos que dividirmos por sedes, con el fin de avanzar 
+		 con el entregable, pero tuvimos dificultad al unir las distintas configuraciones de las topologias.
+		</p>
+		<h3>Solucion:</h3>
+		<p>
+			Se dicidió que un integrante de nuestro grupo ejecutara, las distintas topologias que realizó cada 
+			integrante en distintas gns3 en su computadora y comprobara las conexiones a través de nodo cloud GNS3 
+			usando tuberia UDP.
+		</p>
+		<h2>La cantidad de IP que se tiene que asignar a los distintos host</h2>
+		<h3>Solución:</h3>
+		<p>
+			Se aplicó el concepto de subneting para designar el rango de IP para cada sede (Trujillo, Central, Atención al Cliente) 
+			y luego se realizó subneteo VLSM para cada sede.
+		</p>
+		<h2>Inconveniencia con el Router</h2>
+		<p>El routers <strong>(C3725)</strong> que establecimos al comienzo en cada sede tenían pocos interfaces que venia por defectos .</p>
+		<h3>Solución:</h2>
+		<p>Se buscó otro Router que tenía mas interfaces para la conexiones que necesitabamos en cada sede, el Router que elegimos 
+			fue <strong>C7200</strong> </p>
+		<h2>Topologia</h2>
+		<p>
+			Para la realización de la topologia se analizó primero la topologia lógica, pero no se tuvo encuenta la topologia física, entonces al concluir 
+			la topologia lógica pasamos a la topologia física donde se observó algunos inconveniencias. 
+		</p>
+		<h3>Solución:</h3>
+		<p>Se decidió realizar la topología física y partiendo de ella se realizó algunas modificaciones en la topología lógica</p>
+	</div>
 
 </body>
 </html>
