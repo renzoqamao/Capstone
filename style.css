@@ -20,6 +20,11 @@
     float: right;
 }
 .titulos{
-    width: fit-content;
-    margin: 0 auto;
+    width:fit-content;
+    margin: 20px auto;
+}
+.topologia{
+    margin:auto 70px ;
+    width: 90%;
+    border: 5px solid black;
 }
