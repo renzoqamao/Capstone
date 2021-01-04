@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Acceso a internet</title>
+	<LINK REL=StyleSheet HREF="style.css" TYPE="text/css">
+	</head>
+<body>
+	<div class="encabezado">
+		<p> <img class="imagen" src="UNI.png"></p>
+	</div>
+	<h1 class="curso">Administración de Redes</h1>
+	<hr>
+	<h1 class="titulos">Acceso a Internet</h1>
+	<div class="accesoRemoto">
+	
+	<p>Cada sede  de la empresa contrata  un ISP para el acceso a internet. 
+	<p>Se usa Nat para traducir las direcciones privadas a públicas.</p>
+	<p>En el router de acceso a internet (borde) se le asigna una ip dinámica (dhcp) a la interfaz que se conecta con el exterior.</p>
+	<img src="./AccesoInternet/1.png">
+	<p>Se indica  qué  interfaz está conectada a la red privada (inside) y cual está conectada a la red pública (outside). </p>
+	<img src="./AccesoInternet/2.png">
+	<p>Creamos una lista de control de acceso (ACL) para controlar qué hosts pueden salir al exterior.</p>
+	<img src="./AccesoInternet/3.png">
+	<p>Habilitamos la NAT con sobrecarga (overload) en la interfaz de salida.</p>
+	<img src="AccesoInternet/4.png">
+	<p>Realizamos una consulta a internet por un hosts</p>
+	<img src="./AccesoInternet/5.png">
+	<p>Comprobamos la tabla de traducciones Nat</p>
+	<img src="./AccesoInternet/6.png">
+	</div>
+</body>
+</html>
