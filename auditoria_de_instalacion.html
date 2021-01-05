@@ -12,10 +12,69 @@
 	<h1 class="curso">Administración de Redes</h1>
 	<hr>
 	<h1 class="titulos"> Auditoria de instalación</h1>
-	En este apartado se describe la utilidad de los servicios implementados hasta el momento.
-	<h2>DNS</h2>
-	<p>Para el servicio DNS se utilizó un servidor CentOS7 con los paquetes net-tools y bind para la implemetanción de este servicio. El servidor DNS se encuentra en cada sede y se encarga de traducir las ip a dominios.  Los dominios son sede.org sedecentral e informatica</p>
-	<h2>DHCP</h2>
-    <p>Para el servicio DHCP se utilizó un servidor CentOS7 con los paquetes net-tools y dhcp para la implemetanción de este servicio. El servidor DHCP se encuentra en cada sede y se encarga de asignar las ip correspondientes a cada oficina. </p>
+	<p>En este apartado se describe la utilidad de los servicios implementados hasta el momento.</p>
+	
+	<div class="DHCP">
+		<h2>DHCP</h2>
+		<p>Para el servicio DHCP se utilizó un servidor CentOS7 con los paquetes net-tools y dhcp para la implemetanción de este servicio. El servidor DHCP se encuentra en cada sede y se encarga de asignar las ip correspondientes a cada oficina. </p>
+	</div>
+	
+		<h3> Configurando la interfaz de red del servidor DHCP</h3>
+		<img    src="imagenes/servidordhcp/interfaz.conf.png"/>
+		<h3> Configurando el archivo dhcpd.conf</h3>
+		<img   src="imagenes/servidordhcp/dhcpd.conf.png"/>
+	
+	
+		<h3>Enrrutamiento estatico de los routers sede central y servicio de informatica</h3>
+		<img   src="imagenes/servidordhcp/enrrutamientosedecentral.png"/>
+		<img  src="imagenes/servidordhcp/enrrutamientoInformatica.png"/>
+
+		<h3> Utilizando ip helper en los routers para la comunicación con el servidor DHCP</h3>
+		<img   src="imagenes/servidordhcp/iphelper-servicioInformatica.png"/>
+		<img  src="imagenes/servidordhcp/iphelper-sedecentral.png"/>
+
+	<div class="DNS">
+		<h2>DNS</h2>
+		<p>Para el servicio DNS se utilizó un servidor CentOS7 con los paquetes net-tools y bind para la implemetanción de este servicio. El servidor DNS se encuentra en cada sede y se encarga de traducir las ip a dominios.  Los dominios son sede.org sedecentral e informatica.</p>
+	</div>
+	<div class="pasos">
+		<h3> Configurando la interfaz de red del servidor DNS</h3>
+		<div >
+			<img src="imagenes/servidordns/interfazred.png"/>
+		</div>
+	</div>
+	<div class="pasos">
+		<h3> Configurando el archivo named.conf</h3>
+		<div >
+			<img  src="imagenes/servidordns/named.conf1.png"/>
+		</div>
+		<div >
+			<img  src="imagenes/servidordns/named.conf2.png"/>
+		</div>
+	</div>
+	<div class="pasos">
+		<h3>Configurando el archivo de zonas directas</h3>
+		<div >
+			<img  src="imagenes/servidordns/zonadirecta.png"/>
+		</div>
+	</div>
+	<div class="pasos">
+		<h3> Configurando los archivos de zonas inversas</h3>
+		<div >
+			<img  src="imagenes/servidordns/zonainversa1.png"/>
+		</div>
+		<div >
+			<img  src="imagenes/servidordns/zonainversa2.png"/>
+		</div>
+		<div >
+			<img  src="imagenes/servidordns/zonainversa3.png"/>
+		</div>
+	</div>
+	<div class="pasos">
+		<h3> Configurando el firewall</h3>
+		<div >
+			<img  src="imagenes/servidordns/firewall.png"/>
+		</div>
+	</div>
 </body>
 </html>
