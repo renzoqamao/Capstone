@@ -12,72 +12,129 @@
 	<h1 class="curso">Administración de Redes</h1>
 	<hr>
 	<h1 class="titulos">Auditoría de Inventario</h1>
-    <p>Se listan a continuación la cantidad de dispositivos hardware que se utilizaron para la construcción de la red.</p>
+    <p>Listado de la  cantidad de dispositivos hardware que se utilizaron para la construcción de la red por sede. </p>
     <table id="tabla"   border="2px solid black" >
         <tr>
             <th colspan="2"></th>
-            <th>PCs</th><th>Switches</th><th>Routers</th><th>Servidores</th>
+            <th>PCs</th><th>Switch</th><th>Router</th><th>Servidor</th><th>Firewall</th>
         </tr>
         <tr>
-            <th colspan="2">Red WAN</th>
-            <td> </td><td> </td><td>6</td><td>3</td>
+            <th rowspan="4">Sede<br>Central<br></th>
+            <td></td>
+            <td></td> 
+            <td></td> 
+            <td>1</td>
+            <td></td>
+            <td>2</td>
         </tr>
-        <tr>
-            <th rowspan="3">Sede<br>Central<br></th>
-            <td>Servicio de Informática</td>
-            <td>48</td><td>8</td><td>1</td>
-            <td rowspan="3">16</td>
-        </tr>
-        <tr>
-            <td>Oficina de Gerencias</td>
-            <td>195</td><td>27</td><td>1</td>
-        </tr>
-        <tr>
-            <td>Oficina de Estrategias Empresariales</td>
-            <td>176</td><td>14</td><td>1</td>
-        </tr>
+            <tr>
+                <td>Servicio de Informática</td>
+                <td>-</td>
+                <td>8</td>
+                <td>1</td>
+                <td></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td>Oficina de Gerencias</td>
+                <td>195</td>
+                <td>27</td>
+                <td>1</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Oficina de Estrategias Empresariales</td>
+                <td>176</td>
+                <td>14</td>
+                <td>1</td>
+                <td></td>
+                <td></td>
+            </tr>
+        
         
         <tr>
-            <th rowspan="3">Sede<br>Atención<br>al Cliente</th>
-            
-            <td>Servicios Empresariales</td>
-            <td>116</td><td>12</td><td>1</td>
-            <td rowspan="3">2</td>
+            <th rowspan="4">Sede<br>Atención<br>al Cliente</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>1</td>
+            <td></td>
+            <td></td>
         </tr>
         <tr>
+            <td>Servicios Empresariales</td>
+            <td>116</td>
+            <td>12</td>
+            <td>1</td>
+            <td>1</td>
+            <td></td> 
+        </tr>
+
+        <tr>
             <td>Atención al Usuario</td>
-            <td>133</td><td>11</td><td>1</td>
+            <td>133</td>
+            <td>11</td>
+            <td>1</td>
+            <td>1</td>
+            <td></td>
         </tr>
         <tr>
             <td>Recursos Humanos</td>
-            <td>57</td><td>4</td><td>1</td>
+            <td>57</td>
+            <td>4</td>
+            <td>1</td>
+            <td>1</td>
+            <td></td>
         </tr>
         <tr>
-            <th rowspan="2">Sede<br>Trujillo</th>
+            <th rowspan="3">Sede<br>Trujillo</th>
+            <td></td>
+            <td></td>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
             <td>Oficina de Jefatura</td>
-            <td>95</td><td>9</td><td>1</td>
-            <td rowspan="2">2</td>
+            <td>95</td>
+            <td>9</td>
+            <td>1</td>
+            <td>1</td>
+            <td></td>
         </tr>
         <tr>
             <td>Estrategia Empresarial</td>
-            <td>76</td><td>6</td><td>1</td>
+            <td>76</td>
+            <td>6</td>
+            <td>1</td>
+            <td>1</td>
+            <td></td>
         </tr>
         <tr>
             <th colspan="2">Total</th>
-            <td>875</td><td>91</td><td>14</td><td>23</td>
+            <td>875</td>
+            <td>91</td>
+            <td>14</td>
+            <td>23</td>
+            <td></td>
         </tr>
     </table>
     <h2>PC</h2>
     <p> Dispositivos que poseen una tarjeta red y que se ubican en las oficinas cada departamento de las sede Central, Atención al Cliente 
         y Trujillo. </p>
-    <h2>Switches</h2>
+    <h2>Switch</h2>
     <p> Dispositivos que se encuentran en la capa de acceso, que se encarga de controlar que dispositivos finales se pueden conectar a la red</p>
-    <h2>Routers</h2>
-    <p> Dispositivos que se conectaran con la capa de acceso,que se encargarán de proveer funcionalidades de ruteo entre las diferentes subrede 
-        de la LAN, dividiendo los dominios de broadcast, por medio de VLAN.Como también existiran Routers para las conexiones WAN.
+    <h2>Router</h2>
+    <p> Dispositivos que se conectaran con la capa de acceso,que se encargarán de proveer funcionalidades de ruteo entre las diferentes subredes de la LAN, dividiendo los dominios de broadcast, por medio de VLAN.Como también existiran Routers para las conexiones WAN.
     </p>
-    <h2>Servidores</h2>
+    <h2>Servidor</h2>
     <p>Ubicados en la database del servicio de informatica, que almacena toda la información de la organización. </p>
-    <p>Tambien existirán servidores de DHCP y DNS en cada sede.</p>
+    <p>Tambien existirán servidores de DHCP y DDNS en cada sede.</p>
+    <h2>Firewall</h2>
+    <p> Dispositivo de hardware o software que nos permite gestionar y filtrar la totalidad del trafico entrante y saliente que hay entre 2 redes u ordenadores de una misma red. Su función en la topologia de red es proteger los equipos de red y la información del datacenter.</p>
+    
 </body>
 </html>
