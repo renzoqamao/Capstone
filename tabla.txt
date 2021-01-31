@@ -1,84 +1,85 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Explicación por fases</title>
-	<LINK REL=StyleSheet HREF="../style.css" TYPE="text/css">
-	</head>
-<body>
-	<div class="encabezado">
-		<p> <img class="imagen" src="/Imagenes/UNI.png"></p>
-	</div>
-	<h1 class="curso">Administración de Redes</h1>
-	<hr>
-	<div>
-		<h1 class="titulo"> Explicacion por Fases </h1>
-	</div>
-
-	<div>
-		<h1 class="titulo"> Requerimientos por Departamento </h1>
-		<table id="tabla"   border="2px solid black" >
+### no se usa ############ creo 
+<table id="tabla"   border="2px solid black" >
 			<tr>
 				<th>Sede</th>
 				<th>Area</th>
+				<th>Descripción</th>
 				<th>Departamento</th>
 				<th>Oficinas</th>
-				<th>Requerimientos</th>
+				<th>Host x Oficinas</th>
+				<th>Host x departamento</th>
+				<th>Total de hosts por area</th>
+				<th>Total de hosts por Sede</th>
+			</tr>
+			<tr>
+				<th rowspan="10">Sede<br>Central<br></th>
+				<th rowspan="2" > Servicio de Informatica</th>
+				<th rowspan="2" > Descripcion de informatica</th>
+				<td>Desarrollo y mantenimiento</td> 
+				<td> 3 </td> 
+				<td>10 </td>
+				<td> 30 </td>
+				<th rowspan="2">50</th>
+				<th rowspan="10">430</th>
 			</tr>
 				<tr>
-					<th rowspan="10">Sede<br>Central<br></th>
-					<th rowspan="2" > Servicio de Informatica</th>
-					<td>Desarrollo y mantenimiento</td> 
-					<td> 3 </td> 
-					<td> requerimiento de desarrollo y mantenimiento </td>
+					<td>De Sistema y Red</td> 
+					<td> 2 </td> 
+					<td> 10 </td>
+					<td> 20 </td>
 				</tr>
-
-						<tr>
-							<td>De Sistema y Red</td> 
-							<td> 2 </td> 
-							<td> Requerimientos de sistema y red </td>
-						</tr>
 	
-					<tr>
-						<th rowspan="4">Oficina de Gerencias</td>
-						<td>Gerencia General</td>
-						<td>3</td>
-						<td>requerimientos de gerencia general</td>
-					</tr>
-						<tr>
-							<td>Gerencia de Transformación digital</td>
-							<td>4</td>
-							<td>requerimientos de transformacion digital </td>
-						</tr>
-						<tr>
-							<td>Gerencia de Estrategias de clientes</td>
-							<td>6</td>
-							<td>requerimientos de estrategias de clientes</td>
-						</tr>
-						<tr>
-							<td>Oficinas de apoyo a las gerencias</td>
-							<td>7</td>
-							<td>requerimientos de apoyo a las gerencias</td>
-						</tr>
+			<tr>
+				<th rowspan="4">Oficina de Gerencias</td>
+				<th rowspan="4">descripcion Gerencias</td>
+				<td>Gerencia General</td>
+				<td>3</td>
+				<td>10</td>
+				<td>30</td>
+				<th rowspan="4">200</th>
+			</tr>
+				<tr>
+					<td>Gerencia de Transformación digital</td>
+					<td>4</td>
+					<td>10</td>
+					<td>40</td>
+				</tr>
+				<tr>
+					<td>Gerencia de Estrategias de clientes</td>
+					<td>6</td>
+					<td>10</td>
+					<td>60</td>
+				</tr>
+				<tr>
+					<td>Oficinas de apoyo a las gerencias</td>
+					<td>7</td>
+					<td>10</td>
+					<td>70</td>
+				</tr>
+			
+				<tr>
+					<th rowspan="4">Oficinas de Estrategias empresariales</td>
+					<th rowspan="4">Descripcion de estrategias empresariales</td>
+					<td>Departamento de marketing</td>
+					<td>2</td>
+					<td>20</td>
+					<td>40</td>
+					<th rowspan="4">180</th>	
+				</tr>
 				
-					<tr>
-						<th rowspan="4">Oficinas de Estrategias empresariales</td>
-						<td>Departamento de marketing</td>
-						<td>2</td>
-						<td>requerimientos del departamento de marketing</td>	
-					</tr>
-				
-						<tr>
-							<td>Departamento de Economia</td>
-							<td>4</td>
-							<td>requerimientos de departamento de economia </td>
-						</tr>
+				<tr>
+					<td>Departamento de Economia</td>
+					<td>4</td>
+					<td>20</td>
+					<td>80</td>
+				</tr>
 	
-						<tr>
-							<td>Departamento de Abogacia de la Empresa</td>
-							<td>1</td>
-							<td>requerimientos</td>
-						</tr>
+				<tr>
+					<td>Departamento de Abogacia de la Empresa</td>
+					<td>1</td>
+					<td>20</td>
+					<td>20</td>
+				</tr>
 	
 				<tr>
 					<td>Departamento de Atención al cliente</td>
@@ -224,41 +225,3 @@
 				<td>875</td>
 			</tr>
 		</table>
-	</div>
-	
-
-
-
-
-
-
-
-
-
-
-
-
-	<h1 class="titulos">Diseño de vlan</h1>
-	<div class="accesoRemoto" >
-		<p> Cada departamento de cada área está en un subred diferente. Para una mayor escalabilidad se optó por usar vlan para cada subred. Para ello se usó un switch de capa 3 (por cada área) encargado del enrutamiento inter-vlan y switches de capa 2 para la asignación de los vlans.</p>
-		<p> Para este caso se va ha mostrar las configuraciones realizadas en el área de atenciones empresariales de la sede atención al cliente.</p>
-		<h2> Switch de capa 3 (área de atenciones empresariales)</h2>
-			<p> Vlans por área</p>
-			<img src="./vlan/1.png">
-			<p> Interfaces vlans</p>
-			<img src="vlan/2.png">
-			<p> Enlaces troncales</p>
-			<img src="vlan/3.png">
-
-		<h2>Switches de capa 2</h2>
-			<p> ESW2</p>
-			<img src="vlan/4.png">
-			<img src="vlan/5.png">
-			<p> ESW3</p>
-			<img src="vlan/6.png">
-			<img src="vlan/7.png">
-		<h2> Comprobar conexión entre vlan 110 y vlan 130 </h2>
-			<img src="vlan/8.png">
-	</div>
-</body>
-</html>
