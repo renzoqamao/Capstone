@@ -3,14 +3,236 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Explicación por fases</title>
-	<LINK REL=StyleSheet HREF="style.css" TYPE="text/css">
+	<LINK REL=StyleSheet HREF="../style.css" TYPE="text/css">
 	</head>
 <body>
 	<div class="encabezado">
-		<p> <img class="imagen" src="UNI.png"></p>
+		<p> <img class="imagen" src="/Imagenes/UNI.png"></p>
 	</div>
 	<h1 class="curso">Administración de Redes</h1>
 	<hr>
+	<div>
+		<h1 class="titulo"> Analisis de requisitos de la Organización</h1>
+		<label> Requerimientos por sede </label>
+	</div>
+	<table id="tabla"   border="2px solid black" >
+        <tr>
+            <th>Sede</th>
+			<th>Area</th>
+			<th>Descripción</th>
+			<th>Departamento</th>
+			<th>Oficinas</th>
+			<th>Host x Oficinas</th>
+			<th>Host x departamento</th>
+			<th>Total de hosts por area</th>
+			<th>Total de hosts por Sede</th>
+		</tr>
+		
+        <tr>
+            <th rowspan="10">Sede<br>Central<br></th>
+			<th rowspan="2" > Servicio de Informatica</th>
+			<th rowspan="2" > Descripcion de informatica</th>
+            <td>Desarrollo y mantenimiento</td> 
+            <td> 3 </td> 
+            <td>10 </td>
+            <td> 30 </td>
+			<th rowspan="2">50</th>
+			<th rowspan="10">430</th>
+        </tr>
+            <tr>
+                <td>De Sistema y Red</td> 
+            	<td> 2 </td> 
+            	<td> 10 </td>
+            	<td> 20 </td>
+            </tr>
+
+        <tr>
+			<th rowspan="4">Oficina de Gerencias</td>
+			<th rowspan="4">descripcion Gerencias</td>
+            <td>Gerencia General</td>
+            <td>3</td>
+            <td>10</td>
+            <td>30</td>
+			<th rowspan="4">200</th>
+        </tr>
+            <tr>
+                <td>Gerencia de Transformación digital</td>
+                <td>4</td>
+                <td>10</td>
+                <td>40</td>
+            </tr>
+			<tr>
+                <td>Gerencia de Estrategias de clientes</td>
+                <td>6</td>
+                <td>10</td>
+                <td>60</td>
+			</tr>
+			<tr>
+                <td>Oficinas de apoyo a las gerencias</td>
+                <td>7</td>
+                <td>10</td>
+                <td>70</td>
+            </tr>
+		
+			<tr>
+				<th rowspan="4">Oficinas de Estrategias empresariales</td>
+				<th rowspan="4">Descripcion de estrategias empresariales</td>
+				<td>Departamento de marketing</td>
+				<td>2</td>
+				<td>20</td>
+				<td>40</td>
+				<th rowspan="4">180</th>	
+			</tr>
+			
+			<tr>
+				<td>Departamento de Economia</td>
+				<td>4</td>
+				<td>20</td>
+				<td>80</td>
+			</tr>
+
+			<tr>
+				<td>Departamento de Abogacia de la Empresa</td>
+				<td>1</td>
+				<td>20</td>
+				<td>20</td>
+			</tr>
+
+			<tr>
+				<td>Departamento de Atención al cliente</td>
+				<td>2</td>
+				<td>20</td>
+				<td>40</td>
+			</tr>
+		
+
+			<tr>
+				<th rowspan="8">Atencion<br>al cliente<br></th>
+				<th rowspan="3" >Atencion a serivicios empresariales</th>
+				<th rowspan="3" > Descripcion de atencion a servicios empresariales </th>
+				<td>Departamento de empresas</td> 
+				<td> 2 </td> 
+				<td>20 </td>
+				<td> 40 </td>
+				<th rowspan="3">122</th>
+				<th rowspan="8">322</th>
+			</tr>
+		
+			<tr>
+				<td> Departamento de Soluciones Técnicas</td>
+				<td> 4</td>
+				<td>20</td>
+				<td>80</td>
+			</tr>
+			<tr>
+				<td> Departamento de seguimiento de clientes</td>
+				<td>2</td>
+				<td>1</td>
+				<td>2</td>
+			
+			</tr>
+				
+			<tr>
+				<th rowspan="3" >Atención al Usuario</th>
+					<th rowspan="3" > Descripcion de atencion al usuario </th>
+					<td>Departamento de atencion a usuarios</td> 
+					<td> 3 </td> 
+					<td>20 </td>
+					<td> 60 </td>
+					<th rowspan="3">140</th>
+			</tr>
+
+			<tr>
+				<td>Departamento</td> 
+				<td> 3 </td> 
+				<td>20 </td>
+				<td> 60 </td>
+			</tr>
+		
+		
+		
+		
+		
+			<tr>
+            <th rowspan="4">Sede<br>Atención<br>al Cliente</th>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>1</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Servicios Empresariales</td>
+            <td>116</td>
+            <td>12</td>
+            <td>1</td>
+            <td>1</td>
+            <td></td> 
+        </tr>
+
+        <tr>
+            <td>Atención al Usuario</td>
+            <td>133</td>
+            <td>11</td>
+            <td>1</td>
+            <td>1</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Recursos Humanos</td>
+            <td>57</td>
+            <td>4</td>
+            <td>1</td>
+            <td>1</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th rowspan="3">Sede<br>Trujillo</th>
+            <td></td>
+            <td></td>
+            <td>1</td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Oficina de Jefatura</td>
+            <td>95</td>
+            <td>9</td>
+            <td>1</td>
+            <td>1</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td>Estrategia Empresarial</td>
+            <td>76</td>
+            <td>6</td>
+            <td>1</td>
+            <td>1</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th colspan="2">Total</th>
+            <td>875</td>
+            <td>91</td>
+            <td>14</td>
+            <td>23</td>
+            <td></td>
+        </tr>
+    </table>
+
+
+
+
+
+
+
+
+
+
+
+
 	<h1 class="titulos">Diseño de vlan</h1>
 	<div class="accesoRemoto" >
 		<p> Cada departamento de cada área está en un subred diferente. Para una mayor escalabilidad se optó por usar vlan para cada subred. Para ello se usó un switch de capa 3 (por cada área) encargado del enrutamiento inter-vlan y switches de capa 2 para la asignación de los vlans.</p>
