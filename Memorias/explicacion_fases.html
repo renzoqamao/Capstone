@@ -14,7 +14,7 @@
 	<div>
 		<h1 class="titulo"> Explicacion por Fases </h1>
 	</div>
-
+	<!-- Requerimientos de la Organizacion -->
 	<div>
 		<h1 class="titulo"> Requerimientos por Departamento </h1>
 		<table id="tabla"   border="2px solid black" >
@@ -31,60 +31,82 @@
 					<th rowspan="2" > Servicio de Informatica</th>
 					<td>Desarrollo y mantenimiento</td> 
 					<td> 3 </td> 
-					<td> requerimiento de desarrollo y mantenimiento </td>
+					<td rowspan="2">
+						<ul>
+							<li>Tienen los servidores corporativos en un data center único y dedicado a la organización. </li>
+							<li>Hay un servidor de prueba.</li>
+							<li>Hay un servidor de desarrollo.</li>
+							<li>El nivel de seguridad muy alto.</li>
+							<li>Tiene conexión directa con el Departamento Infomática de Trujillo</li>
+							<li>Los empleados de esta area tendrán accesa a todos los servidores de la empresa desde su red LAN únicamente.</li>
+						</ul> 
+					</td>
 				</tr>
 
 						<tr>
 							<td>De Sistema y Red</td> 
 							<td> 2 </td> 
-							<td> Requerimientos de sistema y red </td>
 						</tr>
 	
 					<tr>
 						<th rowspan="4">Oficina de Gerencias</td>
 						<td>Gerencia General</td>
 						<td>3</td>
-						<td>requerimientos de gerencia general</td>
+						<td rowspan="4">
+							<ul>
+								<li>Servidor de información juridica y administrativa. </li>
+								<li>Servidor de información empresarial e informática solo para el departamento de gerencias de apoyo a las gerencias.</li>
+								<li>Nivel de seguridad muy alto.</li>
+							</ul>
+							<ul>
+								<li>Gerencias de transformación digital podran acceder a la información(servidor) del area de Servicio de Informatica.</li>
+							</ul>
+							<ul>
+								<li>Las oficinas de Gerencia Estrategias de clientes tienen acceso(servidor) al area de Oficinas de Estrategias empresariales.</li>
+							</ul>
+						</td>
 					</tr>
 						<tr>
 							<td>Gerencia de Transformación digital</td>
 							<td>4</td>
-							<td>requerimientos de transformacion digital </td>
 						</tr>
 						<tr>
 							<td>Gerencia de Estrategias de clientes</td>
 							<td>6</td>
-							<td>requerimientos de estrategias de clientes</td>
 						</tr>
 						<tr>
 							<td>Oficinas de apoyo a las gerencias</td>
 							<td>7</td>
-							<td>requerimientos de apoyo a las gerencias</td>
 						</tr>
 				
 					<tr>
 						<th rowspan="4">Oficinas de Estrategias empresariales</td>
 						<td>Departamento de marketing</td>
 						<td>2</td>
-						<td>requerimientos del departamento de marketing</td>	
+						<td rowspan="4">
+							<ul>
+								<li>
+									Cada oficina deberá tener un servidor propio  especifico para sus empleados. Un total de 9 servidores.
+								</li>
+								<li>Nivel de seguridad alto.</li>
+								<li>Conexión directa con las oficinas de Jefatura de la Sede Trujillo.</li>
+							</ul>
+						</td>	
 					</tr>
 				
 						<tr>
 							<td>Departamento de Economia</td>
 							<td>4</td>
-							<td>requerimientos de departamento de economia </td>
 						</tr>
 	
 						<tr>
 							<td>Departamento de Abogacia de la Empresa</td>
 							<td>1</td>
-							<td>requerimientos</td>
 						</tr>
 	
 						<tr>
 							<td>Departamento de Atención al cliente</td>
 							<td>2</td>
-							<td>Requerimientos de aencion al cliente</td>
 						</tr>
 			
 				<!-- Sede Atencion al Cliente -->
@@ -93,45 +115,48 @@
 					<th rowspan="3" >Atencion a serivicios empresariales</th>
 					<td>Departamento de empresas</td> 
 					<td> 2 </td> 
-					<td>Requerimientos del departamento de empresas </td>
+					<td rowspan="3">
+						<ul>
+							<li>Nivel de seguridad Medio.</li>
+						</ul>
+					</td>
 				</tr>
 						<tr>
 							<td> Departamento de Soluciones Técnicas</td>
 							<td> 4</td>
-							<td>requerimientos del departamento de soluciones tecnicas</td>
 						</tr>
 						<tr>
 							<td> Departamento de seguimiento de clientes</td>
 							<td>2</td>
-							<td>requerimientos de dpt de seg de clientes</td>
 						</tr>
 					
 					<tr>
 						<th rowspan="3" >Atención al Usuario</th>							<td>Departamento de atencion a usuarios</td> 
 						<td> 3 </td> 
-						<td> requerimientos del dpt de atencion a usuarios </td>
+						<td rowspan="3"> </td>
 					</tr>
 						<tr>
 							<td>Departamento de nuevos clientes</td> 
 							<td> 2 </td> 
-							<td>requerimientos del dpt de nuevos clientes </td>
 						</tr>
 			
 						<tr>
 							<td>Departamento de Seguimiento de clientes</td> 
 							<td> 2 </td> 
-							<td>requerimientos del dpt de seg de clientes</td>
 						</tr>
 					<tr>
 						<th rowspan="2" >Recursos Humanos</th>
 						<td>Departamento de Recursos Humanos de alto nivel</td> 
 						<td> 1 </td> 
-						<td>requerimientos del dpt de recursos humanos de alto nivel</td>
+						<td rowspan="2">
+							<ul>
+								<li>Nivel de seguridad Medio.</li>
+							</ul>
+						</td>
 					</tr>
 						<tr>
 							<td>Departamento de Recursos Humanos de area</td> 
 								<td> 2 </td> 
-								<td>requerimientos del dpt de recursos humanos de area  </td>
 							</tr>
 				<!-- Sede Trujillo -->
 				<tr>	
@@ -139,81 +164,768 @@
 					<th rowspan="5"> Oficinas de Jefatura </th>
 					<td> Departamento de Marketing</td>
 					<td> 1  </td>
-					<td>requisitos del dtp de marketing</td>
+					<td rowspan="5">
+						<ul>
+							<li>Cada Oficina podrá acceder al servidor correspondiente.</li>
+						</ul>
+					</td>
 				</tr>
 						<tr>
 							<td>Departamento de Economia</td>
 							<td>1</td>
-							<td>Requisitos del dpt de economia</td>
 						</tr>
 						<tr>
 							<td>Departamento de Abogacia de la empresa</td>
 							<td>1</td>
-							<td>Requisitos del dpt de abogacia de las empresas</td>
 						</tr>
 						<tr>
 							<td>Departamento de Atencion al cliente</td>
-							<td>1</td>
-							<td>Requisitos del departamento de atencion al cliente</td>
+							<td>1</td>							
 						</tr>
 						<tr>
 							<td>Departamento de Informatica</td>
 							<td>1</td>
-							<td>Requisitos del departamento de informatica </td>
 						</tr>
 	
 				<tr>
 					<th rowspan="4">Estrategia Empresarial</th>
 					<td>Departamento de Empresas</td>
 					<td>1</td>
-					<td>requisitos del departamento de Empresas</td>
+					<td rowspan="3">
+						<ul>
+							<li>Cada Oficina puede acceder al servidor correspondiente a su departamento.</li>
+						</ul>
+					</td>
 				</tr>
 						<tr>
 							<td>Departamento de Clientes</td>
 							<td>1</td>
-							<td>requisitos del departamento de clientes</td>
 						</tr>
 						<tr>
 							<td>Departamento de Seguimiento de clientes</td>
 							<td>2</td>
-							<td>Requisitos del departamneto de seguimiento de clientes </td>
 						</tr>
+		</table>
+	</div>
+	<!-- Diseño de la Topologia Fisica -->
+	<h1 class="titulos"> Diseño de la red en las sedes </h1>
+	<div>
+		<p>Para el diseño de la red en cada sede se decidio dividir los departamentos y oficinas por pisos no superando un maximo de 10 oficinas por piso. </p>
+		<div>
+			<h2 class="titulo">Sede Central</h2>
+			<p> La sede Central esta divida en 5 pisos. En el primer y segundo piso se encuentra el area de gerencias; tercer piso, area de Estrategias empresariales; cuarto piso, area de servicio de informatica y el quinto piso se encuentra el datacenter, que esta conformado por los racks principalmente.</p>
+			<ul>
+				<li>En el primer piso:
+					<ul>
+						<li>Las 4 oficinas de Gerencia de Transformación Digital</li>
+						<li>Las 6 oficinas de gerencia de estrategia de clientes.</li> 
+					</ul>
+				</li>
+				<li>En el segundo piso:  
+					<ul>
+						<li>Las 3 oficinas de gerencia general</li>
+						<li>Las 7 oficinas de apoyo a las gerencias.</li> 
+					</ul>  
+				</li>
+				<li>En el tercer piso:
+					<ul>
+						<li>Las 2 oficinas del departamento de marketing.</li>
+						<li>Las 4 oficinas del departamento de economia.</li>
+						<li>La oficina del departamento Abogacia de la empresa.</li>
+						<li>Las dos oficinas del departamento de atención al cliente.</li>
+					</ul>
+				</li>
+				<li>En el cuarto piso:
+					<ul>
+						<li>Las 3 oficinas del departamento de Desarrollo y mantenimiento.</li>
+						<li>Las dos oficinas del departamento de Sistema y de Red.</li>
+					</ul>
+				</li>
+				<li>En el quinto piso:
+					<ul>
+						<li>Area de Racks</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<h2 class="titulo">Sede Atención al Cliente</h2>
+			<p>La sede atención al cliente esta divida en 3 pisos. En el primer priso se encuentra el Area de atención al usuario; segundo piso, area de atención a servicios empresariales; tercer piso, area de recursos humanos.</p>
+			<ul>
+				<li>En el primer piso :
+					<ul>
+						<li>Las tres oficinas del departamento de atención al usuario</li>
+						<li>Las dos oficinas del departamento de nuevos clientes</li>
+						<li>Las dos oficinas del departamento de seguimiento de clientes</li>
+					</ul>
+				</li>
+				<li>En el segundo piso :
+					<ul>
+						<li>Las dos oficinas del departamento de Empresas.</li>
+						<li>Las cuatro oficinas del departamento de soluciones técnicas.</li>
+						<li>Las dos oficinas del departamento de seguimiento de clientes.</li>
+					</ul>
+
+				</li>
+			</ul>
+		</div>
+		<div>
+			<h2 class="titulo">Sede Trujillo</h2>
+			<p>La sede atención al cliente esta divida en 2 pisos. En el primer priso se encuentra las oficinas de Jefatura; segundo piso, Oficinas de Estrategias Empresariales; tercer piso, se encuentra el datacenter, que esta conformado por los racks principalmente.</p>
+			<ul>
+				<li>En el primer piso:
+					<ul>
+						<li>La oficina del departamento de marketing.</li>
+						<li>La oficina del departamento de Abogacia de la empresa.</li>
+						<li>La oficina del departamento de economia.</li>
+						<li>La oficina del departamento de informática.</li>
+					</ul>
+				</li>
+				<li>En el segundo piso:
+					<ul>
+						<li>La oficina del departamento de Empresas</li>
+						<li>La oficina del departamento de Clientes</li>
+						<li>Las dos oficinas del departamento de seguimiento de Clientes</li>
+					</ul>
+				</li>
+				<li>En el tercer piso:
+					<ul>
+						<li>Area de Racks</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- Diseño de la red WAN -->
+	<div class="WAN">
+		<h1 class="titulos "> Red WAN</h1>
+		<p> La conexión entre las sedes sera por Red WAN entre ellas y a traves de internet como una segunda red de soporte.  </p>
+	</div>
+	<!-- Diseño de la Topologia Logica -->
+	<h1 class="titulo"> Diseño de la red  </h1>
+	<p> La red de cada sede será una red LAN </p>
+	<!-- Diseño de la red en Sede Central -->
+	<p>La sede central tendrá la siguiente dirección red : 192.168.0.0 con máscara : 255.255.192.0</p>
+	<div>
+		<table id="tabla"   border="2px solid black" >
+			<tr>
+				<th>Nro</th>
+				<th>Nombre</th>
+				<th>Nodos</th>
+				<th>Bloque <br> CIDR</th>
+				<th>Tamaño</th>
+				<th>Direccion <br> de Red</th>
+				<th>Máscara</th>
+				<th>Primera IP utilizable</th>
+				<th>Última IP utilizable</th>
+				<th>Dirección broadcast</th>
+			</tr>
+				<!-- Sede Central -->
+				<tr>
+					<td>1</td> 
+					<td>Dpt. de Economia</td> 
+					<td></td>
+					<td>/25</td>
+					<td>126</td>
+					<td>192.168.0.0</td> 
+					<td>255.255.255.128</td> 
+					<td>192.168.0.1</td>
+					<td>192.168.0.126</td>
+					<td>192.168.0.127</td>
+				</tr>
+				<tr>
+					<td>2</td> 
+					<td>Oficinas de Apoyo <br> a las gerencias</td> 
+					<td></td>
+					<td>/25</td>
+					<td>126</td>
+					<td>192.168.0.128</td> 
+					<td>255.255.255.128</td> 
+					<td>192.168.0.129</td>
+					<td>192.168.0.254</td>
+					<td>192.168.0.255</td>
+				</tr>
+				<tr>
+					<td>3</td> 
+					<td>Gerencia de Estrategias <br> de clientes</td> 
+					<td></td>
+					<td>/26</td>
+					<td>62</td>
+					<td>192.168.1.0</td> 
+					<td>255.255.255.192</td> 
+					<td>192.168.1.1</td>
+					<td>192.168.1.62</td>
+					<td>192.168.1.63</td>
+				</tr>
+				<tr>
+					<td>4</td> 
+					<td>Gerencia de Transformacion <br>digital </td> 
+					<td></td>
+					<td>/26</td>
+					<td>62</td>
+					<td>192.168.1.64</td> 
+					<td>255.255.255.192</td> 
+					<td>192.168.1.65</td>
+					<td>192.168.1.126</td>
+					<td>192.168.1.127</td>
+				</tr>
+				<tr>
+					<td>5</td> 
+					<td>Dpt. de Marketing</td> 
+					<td></td>
+					<td>/26</td>
+					<td>62</td>
+					<td>192.168.1.128</td> 
+					<td>255.255.255.192</td> 
+					<td>192.168.1.129</td>
+					<td>192.168.1.190</td>
+					<td>192.168.1.191</td>
+				</tr>
+				<tr>
+					<td>6</td> 
+					<td>Dpt. Atención <br> al cliente</td> 
+					<td></td>
+					<td>/26</td>
+					<td>62</td>
+					<td>192.168.1.192</td> 
+					<td>255.255.255.192</td> 
+					<td>192.168.1.193</td>
+					<td>192.168.1.254</td>
+					<td>192.168.1.255</td>
+				</tr>
+				<tr>
+					<td>7</td> 
+					<td>Dpt. De Desarrollo <br> y mantenimiento </td> 
+					<td></td>
+					<td>/27</td>
+					<td>30</td>
+					<td>192.168.2.0</td> 
+					<td>255.255.255.224</td> 
+					<td>192.168.2.1</td>
+					<td>192.168.2.30</td>
+					<td>192.168.2.31</td>
+				</tr>
+				<tr>
+					<td>8</td> 
+					<td>Gerencia General</td> 
+					<td></td>
+					<td>/27</td>
+					<td>30</td>
+					<td>192.168.2.32</td> 
+					<td>255.255.255.224</td> 
+					<td>192.168.2.33</td>
+					<td>192.168.2.62</td>
+					<td>192.168.2.63</td>
+				</tr>
+				<tr>
+					<td>9</td> 
+					<td>De Sistemas y Red</td> 
+					<td></td>
+					<td>/27</td>
+					<td>30</td>
+					<td>192.168.2.64</td> 
+					<td>255.255.255.224</td> 
+					<td>192.168.2.65</td>
+					<td>192.168.2.94</td>
+					<td>192.168.2.95</td>
+				</tr>
+				<tr>
+					<td>10</td> 
+					<td>Dpt. De abogacia <br> de la empresa</td> 
+					<td></td>
+					<td>/27</td>
+					<td>30</td>
+					<td>192.168.2.96</td> 
+					<td>255.255.255.224</td> 
+					<td>192.168.2.97</td>
+					<td>192.168.2.126</td>
+					<td>192.168.2.127</td>
+				</tr>
+				<tr>
+					<td>11</td> 
+					<td>Servidores</td> 
+					<td></td>
+					<td>/27</td>
+					<td>30</td>
+					<td>192.168.2.128</td>
+					<td>255.255.255.224</td> 
+					<td>192.168.2.129</td> 
+					<td>192.168.2.158</td>
+					<td>192.168.2.159</td>
+				</tr>
+				<tr>
+					<td>12</td> 
+					<td>R.Sede_Central <br> - <br> R.Estrategia_Empresariales</td> 
+					<td></td>
+					<td>/30</td>
+					<td>2</td>
+					<td>192.168.2.160</td> 
+					<td>255.255.255.252</td>
+					<td>192.168.2.161</td>
+					<td>192.168.2.162</td>
+					<tr>192.168.2.163</tr>
+				</tr>
+				<tr>
+					<td>13</td> 
+					<td>R.Sede_Central <br> - <br> R.Servicio_Infomaticos</td> 
+					<td></td>
+					<td>/30</td>
+					<td>2</td>
+					<td>192.168.2.164</td> 
+					<td>255.255.255.252</td> 
+					<td>192.168.2.165</td>
+					<td>192.168.2.166</td>
+					<td>192.168.2.167</td>
+				</tr>
+				<tr>
+					<td>14</td> 
+					<td>R.Sede_Central <br>- <br> R.Gerencias</td> 
+					<td></td>
+					<td>/30</td>
+					<td>2</td>
+					<td>192.168.2.168</td> 
+					<td>255.255.255.252</td> 
+					<td>192.168.2.169</td>
+					<td>192.168.2.170</td>
+					<td>192.168.2.171</td>
+				</tr>
+				<tr>
+					<td>15</td> 
+					<td>R.Sede_Central <br>- <br>R.Proxy</td> 
+					<td></td>
+					<td>/30</td>
+					<td>2</td>
+					<td>192.168.2.172</td> 
+					<td>255.255.255.252</td> 
+					<td>192.168.2.173</td>
+					<td>192.168.2.174</td>
+					<td>192.168.2.175</td>
+				</tr>			
+		</table>
+	</div>
+	<!-- Diseño de la red en Sede Atención al cliente -->
+	<p>La sede atención al cliente tendrá la siguiente dirección red : 192.168.64.0 con máscara : 255.255.192.0</p>
+	<div>
+		<table id="tabla"   border="2px solid black" >
+			<tr>
+				<th>Nro</th>
+				<th>Nombre</th>
+				<th>Nodos</th>
+				<th>Bloque <br> CIDR</th>
+				<th>Tamaño</th>
+				<th>Direccion <br> de Red</th>
+				<th>Máscara</th>
+				<th>Primera IP utilizable</th>
+				<th>Última IP utilizable</th>
+				<th>Dirección broadcast</th>
+			</tr>
+				<!-- Sede Atención al cliente -->
+				<tr>
+					<td>1</td> 
+					<td>Dpt De Soluciones <br> Técnicas</td> 
+					<td></td>
+					<td>/25</td>
+					<td>126</td>
+					<td>192.168.64.0</td> 
+					<td>255.255.255.128</td> 
+					<td>192.168.64.1</td>
+					<td>192.168.64.126</td>
+					<td>192.168.64.127</td>
+				</tr>
+				<tr>
+					<td>2</td> 
+					<td>Dpt Atención <br> a usuarios </td> 
+					<td></td>
+					<td>/26</td>
+					<td>62</td>
+					<td>192.168.64.128</td> 
+					<td>255.255.255.192</td> 
+					<td>192.168.64.129</td>
+					<td>192.168.64.190</td>
+					<td>192.168.64.191</td>
+				</tr>
+				<tr>
+					<td>3</td> 
+					<td>Dpt de Empresas</td> 
+					<td></td>
+					<td>/26</td>
+					<td>62</td>
+					<td>192.168.64.192</td> 
+					<td>255.255.255.192</td> 
+					<td>192.168.64.193</td>
+					<td>192.168.64.254</td>
+					<td>192.168.64.255</td>
+				</tr>
+				<tr>
+					<td>4</td> 
+					<td>Dpt. De Nuevos <br> clientes</td> 
+					<td></td>
+					<td>/26</td>
+					<td>62</td>
+					<td>192.168.65.0</td> 
+					<td>255.255.255.192</td> 
+					<td>192.168.65.1</td>
+					<td>192.168.65.62</td>
+					<td>192.168.65.63</td>
+				</tr>
+				<tr>
+					<td>5</td> 
+					<td>Dpt De Seguimiento <br> de clientes </td> 
+					<td></td>
+					<td>/26</td>
+					<td>62</td>
+					<td>192.168.65.64</td> 
+					<td>255.255.255.192</td> 
+					<td>192.168.65.65</td>
+					<td>192.168.65.126</td>
+					<td>192.168.65.127</td>
+				</tr>
+				<tr>
+					<td>6</td> 
+					<td>Dpt de Recursos <br> Humanos de areas</td> 
+					<td></td>
+					<td>/26</td>
+					<td>62</td>
+					<td>192.168.65.128</td> 
+					<td>255.255.255.192</td> 
+					<td>192.168.65.129</td>
+					<td>192.168.65.190</td>
+					<td>192.168.65.191</td>
+				</tr>
+				<tr>
+					<td>7</td> 
+					<td>Dpt de Recursos <br> humanos de alto nivel</td> 
+					<td></td>
+					<td>/27</td>
+					<td>30</td>
+					<td>192.168.65.192</td> 
+					<td>255.255.255.224</td> 
+					<td>192.168.65.193</td>
+					<td>192.168.65.222</td>
+					<td>192.168.65.223</td>
+				</tr>
+				<tr>
+					<td>8</td> 
+					<td>Servidores</td> 
+					<td></td>
+					<td>/29</td>
+					<td>6</td>
+					<td>192.168.65.224</td> 
+					<td>255.255.255.248</td> 
+					<td>192.168.65.225</td>
+					<td>192.168.65.230</td>
+					<td>192.168.65.231</td>
+				</tr>
+				<tr>
+					<td>9</td> 
+					<td>Dpt. De seguimiento <br> de clientes </td> 
+					<td></td>
+					<td>/30</td>
+					<td>2</td>
+					<td>192.168.65.232</td> 
+					<td>255.255.255.252</td> 
+					<td>192.168.65.233</td>
+					<td>192.168.65.234</td>
+					<td>192.168.65.235</td>
+				</tr>
+				<tr>
+					<td>10</td> 
+					<td>R.AtencionCliente <br>- <br> R.Servicio Empresariales</td> 
+					<td></td>
+					<td>/30</td>
+					<td>2</td>
+					<td>192.168.65.236</td> 
+					<td>255.255.255.252</td> 
+					<td>192.168.65.237</td>
+					<td>192.168.65.238</td>
+					<td>192.168.65.239</td>
+				</tr>
+				<tr>
+					<td>11</td> 
+					<td>R.AtencionCliente <br> - <br> R.Usuario</td> 
+					<td></td>
+					<td>/30</td>
+					<td>2</td>
+					<td>192.168.65.240</td> 
+					<td>255.255.255.252</td> 
+					<td>192.168.65.241</td>
+					<td>192.168.65.242</td>
+					<td>192.168.65.243</td>
+				</tr>
+				<tr>
+					<td>12</td> 
+					<td>R.AtencionCliente <br>- <br> R.RecursosHumanos</td> 
+					<td></td>
+					<td>/30</td>
+					<td>2</td>
+					<td>192.168.65.244</td> 
+					<td>255.255.255.252</td> 
+					<td>192.168.65.245</td>
+					<td>192.168.65.246</td>
+					<td>192.168.65.247</td>
+				</tr>
+				<tr>
+					<td>13</td> 
+					<td>R.AtenciónCliente <br> - <br> R.proxy</td> 
+					<td></td>
+					<td>/30</td>
+					<td>2</td>
+					<td>192.168.65.248</td> 
+					<td>255.255.255.252</td> 
+					<td>192.168.65.249</td>
+					<td>192.168.65.250</td>
+					<td>192.168.65.251</td>
+				</tr>			
+		</table>
+	</div>
+	<!-- Diseño de la red en Sede Trujillo -->
+	<p>La sede atención al Sede Trujillo tendrá la siguiente dirección red : 192.168.128.0 con máscara : 255.255.192.0</p>
+	<div>
+		<table id="tabla"   border="2px solid black" >
+			<tr>
+				<th>Nro</th>
+				<th>Nombre</th>
+				<th>Nodos</th>
+				<th>Bloque <br> CIDR</th>
+				<th>Tamaño</th>
+				<th>Direccion <br> de Red</th>
+				<th>Máscara</th>
+				<th>Primera IP utilizable</th>
+				<th>Última IP utilizable</th>
+				<th>Dirección broadcast</th>
+			</tr>
+				<!-- Sede Trujillo-->
+				<tr>
+					<td>1</td> 
+					<td>Dpt de seguimiento <br> de clientes </td> 
+					<td></td>
+					<td>/26</td>
+					<td>62</td>
+					<td>192.168.128.0</td> 
+					<td>255.255.255.192</td> 
+					<td>192.168.128.1</td>
+					<td>192.168.128.62</td>
+					<td>192.168.128.63</td>
+				</tr>
+				<tr>
+					<td>2</td> 
+					<td>Dpt de marketing</td> 
+					<td></td>
+					<td>/27</td>
+					<td>30</td>
+					<td>192.168.128.64</td> 
+					<td>255.255.255.224</td> 
+					<td>192.168.128.65</td>
+					<td>192.168.128.94</td>
+					<td>192.168.128.95</td>
+				</tr>
+				<tr>
+					<td>3</td> 
+					<td>Dpt de Economia</td> 
+					<td></td>
+					<td>/27</td>
+					<td>30</td>
+					<td>192.168.128.96</td> 
+					<td>255.255.255.224</td> 
+					<td>192.168.128.97</td>
+					<td>192.168.128.126</td>
+					<td>192.168.128.127</td>
+				</tr>
+				<tr>
+					<td>4</td> 
+					<td>Dpt de Abogacia <br> de la empresa </td> 
+					<td></td>
+					<td>/27</td>
+					<td>30</td>
+					<td>192.168.128.128</td> 
+					<td>255.255.255.224</td> 
+					<td>192.168.128.129</td>
+					<td>192.168.128.158</td>
+					<td>192.168.128.159</td>
+				</tr>
+				<tr>
+					<td>5</td> 
+					<td>Dpt De Atencion <br>  al cliente </td> 
+					<td></td>
+					<td>/27</td>
+					<td>30</td>
+					<td>192.168.128.160</td> 
+					<td>255.255.255.255.224</td> 
+					<td>192.168.128.161</td>
+					<td>192.168.128.190</td>
+					<td>192.168.128.191</td>
+				</tr>
+				<tr>
+					<td>6</td> 
+					<td>Dpt de Informatica</td> 
+					<td></td>
+					<td>/27</td>
+					<td>30</td>
+					<td>192.168.128.192</td> 
+					<td>255.255.255.224</td> 
+					<td>192.168.128.193</td>
+					<td>192.168.128.222</td>
+					<td>192.168.128.223</td>
+				</tr>
+				<tr>
+					<td>7</td> 
+					<td>Dpt de empresas</td> 
+					<td></td>
+					<td>/27</td>
+					<td>30</td>
+					<td>192.168.128.224</td> 
+					<td>255.255.255.224</td> 
+					<td>192.168.128.225</td>
+					<td>192.168.128.254</td>
+					<td>192.168.128.255</td>
+				</tr>
+				<tr>
+					<td>8</td> 
+					<td>Dpt de clientes</td> 
+					<td></td>
+					<td>/27</td>
+					<td>30</td>
+					<td>192.168.129.0</td> 
+					<td>255.255.255.224</td> 
+					<td>192.168.129.1</td>
+					<td>192.168.129.30</td>
+					<td>192.168.129.31</td>
+				</tr>
+				<tr>
+					<td>9</td> 
+					<td>Servidores</td> 
+					<td></td>
+					<td>/29</td>
+					<td>6</td>
+					<td>192.168.129.32</td> 
+					<td>255.255.255.248</td> 
+					<td>192.168.129.33</td>
+					<td>192.168.129.38</td>
+					<td>192.168.129.39</td>
+				</tr>
+				<tr>
+					<td>10</td> 
+					<td>R.Trujillo <br>- <br> R.Jefatura</td> 
+					<td></td>
+					<td>/30</td>
+					<td>2</td>
+					<td>192.168.129.40</td> 
+					<td>255.255.255.252</td> 
+					<td>192.168.129.41</td>
+					<td>192.168.129.42</td>
+					<td>192.168.129.43</td>
+				</tr>
+				<tr>
+					<td>11</td> 
+					<td>R.Trujillo <br> - <br> R.EstrategiaEmpresariales</td> 
+					<td></td>
+					<td>/30</td>
+					<td>2</td>
+					<td>192.168.129.44</td> 
+					<td>255.255.255.252</td> 
+					<td>192.168.129.45</td>
+					<td>192.168.129.46</td>
+					<td>192.168.129.47</td>
+				</tr>
+				<tr>
+					<td>12</td> 
+					<td>R.Trujillo <br>- <br> R.Firewall</td> 
+					<td></td>
+					<td>/30</td>
+					<td>2</td>
+					<td>192.168.129.48</td> 
+					<td>255.255.255.252</td> 
+					<td>192.168.129.49</td>
+					<td>192.168.129.50</td>
+					<td>192.168.129.51</td>
+				</tr>			
 		</table>
 	</div>
 	
 
-
-
-
-
-
-
-
-
-
-
-
-	<h1 class="titulos">Diseño de vlan</h1>
+	<!-- RED VLAN -->
 	<div class="accesoRemoto" >
+		<h1 class="titulos">Diseño de vlan</h1>
 		<p> Cada departamento de cada área está en un subred diferente. Para una mayor escalabilidad se optó por usar vlan para cada subred. Para ello se usó un switch de capa 3 (por cada área) encargado del enrutamiento inter-vlan y switches de capa 2 para la asignación de los vlans.</p>
 		<p> Para este caso se va ha mostrar las configuraciones realizadas en el área de atenciones empresariales de la sede atención al cliente.</p>
 		<h2> Switch de capa 3 (área de atenciones empresariales)</h2>
 			<p> Vlans por área</p>
-			<img src="./vlan/1.png">
+			<img src="../Imagenes/vlan/1.png">
 			<p> Interfaces vlans</p>
-			<img src="vlan/2.png">
+			<img src="../Imagenes/vlan/2.png">
 			<p> Enlaces troncales</p>
-			<img src="vlan/3.png">
+			<img src="../Imagenes/vlan/3.png">
 
 		<h2>Switches de capa 2</h2>
 			<p> ESW2</p>
-			<img src="vlan/4.png">
-			<img src="vlan/5.png">
+			<img src="../Imagenes/vlan/4.png">
+			<img src="../Imagenes/vlan/5.png">
 			<p> ESW3</p>
-			<img src="vlan/6.png">
-			<img src="vlan/7.png">
+			<img src="../Imagenes/vlan/6.png">
+			<img src="../Imagenes/vlan/7.png">
 		<h2> Comprobar conexión entre vlan 110 y vlan 130 </h2>
-			<img src="vlan/8.png">
+			<img src="../Imagenes/vlan/8.png">
+	</div>
+
+	<!-- Protocolos -->	
+	<!-- Protocolos de enrutamiento  -->
+	<div class=" Enrrutamiento_Dinamico">
+		<h1 class="titulos"> Enrutamiento Dinamico</h1>
+		<!-- Sede Central -->
+		<div>
+			<h1 class="titulo">Sede Central</h1>
+			<p> La sede central tendra 4 areas.</p>
+			<ul>
+				<li>La sede central y las areas pertenecerán a la troncal (area 0).</li>
+				<li>El area de servicio de informatica y sus departamentos pertenecerán al area 1.</li>
+				<li>El area de oficinas de gerencias y sus departamentos pertenecerán al area 2.</li>
+				<li>El area de oficinas de estrategias y sus departamentos empresariales pertenecerán al area 3.</li>
+			</ul>
+		</div>
+		<!-- Sede Atención al cliente -->
+		<div>
+			<h1 class="titulo">Sede Atención al cliente</h1>
+			<p> La sede atención al cliente tendra 4 areas.</p>
+			<ul>
+				<li>La sede atención al cliente y las areas pertenecerán a la troncal (area 0).</li>
+				<li>El area de atención a servicios empresariales y sus departamentos pertenecerán al area 1.</li>
+				<li>El area de atención al usuario y sus departamentos pertenecerán al area 2.</li>
+				<li>El area de recursos humanos y sus departamentos empresariales pertenecerán al area 3.</li>
+			</ul>
+		</div>
+		<!-- Sede Trujillo -->
+		<div>
+			<h1 class="titulo">Sede Trujillo</h1>
+			<p> La sede atención al cliente tendra 3 areas.</p>
+			<ul>
+				<li>La sede Trujillo y las areas pertenecerán a la troncal (area 0).</li>
+				<li>El area de oficinas de Jefatura y sus departamentos pertenecerán al area 1.</li>
+				<li>El area de estrategia empresarial y sus departamentos pertenecerán al area 2.</li>
+			</ul>
+		</div>
+
+	</div>
+	<!-- Servicios de Red de la organización-->
+	<div class="Servicios">
+		<h1 class="titulos"> Servicios Ofrecidos </h1>
+		<ul>
+			<li> Servicio DDNS</li>
+			<li> Servicio DHCP</li>
+			<li> Servicio Web</li>
+			<li> Servicio FTP</li>
+			<li> Servicio de correo</li>
+			<li> Servicio de acceso Remoto</li>
+		</ul>
+	</div>
+	<!-- Protocolos de seguridad -->
+	<div class="Protocolos_de_Seguridad">
+		<h1 class="titulos"> Protocolos de seguridad</h1>
+		<ul>
+			<li> Firewall</li>
+			<li> Proxy</li>
+			<li>Snort</li>
+		</ul>
+
 	</div>
 </body>
 </html>
