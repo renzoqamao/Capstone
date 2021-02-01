@@ -225,3 +225,29 @@
 				<td>875</td>
 			</tr>
 		</table>
+#####################################################################3
+
+
+<!-- RED VLAN -->
+	<div class="vlan" >
+		<h1 class="titulo">Diseño de vlan</h1>
+		<p> Cada departamento de cada área está en un subred diferente. Para una mayor escalabilidad se optó por usar vlan para cada subred. Para ello se usó un switch de capa 3 (por cada área) encargado del enrutamiento inter-vlan y switches de capa 2 para la asignación de los vlans.</p>
+		<p> Para este caso se va ha mostrar las configuraciones realizadas en el área de atenciones empresariales de la sede atención al cliente.</p>
+		<h2> Switch de capa 3 (área de atenciones empresariales)</h2>
+			<p> Vlans por área</p>
+			<img src="../Imagenes/vlan/1.png">
+			<p> Interfaces vlans</p>
+			<img src="../Imagenes/vlan/2.png">
+			<p> Enlaces troncales</p>
+			<img src="../Imagenes/vlan/3.png">
+
+		<h2>Switches de capa 2</h2>
+			<p> ESW2</p>
+			<img src="../Imagenes/vlan/4.png">
+			<img src="../Imagenes/vlan/5.png">
+			<p> ESW3</p>
+			<img src="../Imagenes/vlan/6.png">
+			<img src="../Imagenes/vlan/7.png">
+		<h2> Comprobar conexión entre vlan 110 y vlan 130 </h2>
+			<img src="../Imagenes/vlan/8.png">
+	</div>

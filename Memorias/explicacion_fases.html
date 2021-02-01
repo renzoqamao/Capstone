@@ -16,7 +16,7 @@
 	</div>
 	<!-- Requerimientos de la Organizacion -->
 	<div>
-		<h1 class="titulo"> Requerimientos por Departamento </h1>
+		<h1 class="titulo"> Analisis de requerimientos </h1>
 		<table id="tabla"   border="2px solid black" >
 			<tr>
 				<th>Sede</th>
@@ -207,6 +207,8 @@
 						</tr>
 		</table>
 	</div>
+	<!-- Diseño -->
+	<div>
 	<!-- Diseño de la Topologia Fisica -->
 	<h1 class="titulos"> Diseño de la red en las sedes </h1>
 	<div>
@@ -298,7 +300,7 @@
 	</div>
 	<!-- Diseño de la red WAN -->
 	<div class="WAN">
-		<h1 class="titulos "> Red WAN</h1>
+		<h1 class="titulo"> Red WAN</h1>
 		<p> La conexión entre las sedes sera por Red WAN entre ellas y a traves de internet como una segunda red de soporte.  </p>
 	</div>
 	<!-- Diseño de la Topologia Logica -->
@@ -678,6 +680,7 @@
 				</tr>			
 		</table>
 	</div>
+	
 	<!-- Diseño de la red en Sede Trujillo -->
 	<p>La sede atención al Sede Trujillo tendrá la siguiente dirección red : 192.168.128.0 con máscara : 255.255.192.0</p>
 	<div>
@@ -841,36 +844,189 @@
 				</tr>			
 		</table>
 	</div>
-	
-
-	<!-- RED VLAN -->
-	<div class="accesoRemoto" >
-		<h1 class="titulos">Diseño de vlan</h1>
+	<!-- Diseño de la RED VLAN -->
+	<div class="vlan" >
+		<h1 class="titulo">Diseño de vlan</h1>
 		<p> Cada departamento de cada área está en un subred diferente. Para una mayor escalabilidad se optó por usar vlan para cada subred. Para ello se usó un switch de capa 3 (por cada área) encargado del enrutamiento inter-vlan y switches de capa 2 para la asignación de los vlans.</p>
-		<p> Para este caso se va ha mostrar las configuraciones realizadas en el área de atenciones empresariales de la sede atención al cliente.</p>
-		<h2> Switch de capa 3 (área de atenciones empresariales)</h2>
-			<p> Vlans por área</p>
-			<img src="../Imagenes/vlan/1.png">
-			<p> Interfaces vlans</p>
-			<img src="../Imagenes/vlan/2.png">
-			<p> Enlaces troncales</p>
-			<img src="../Imagenes/vlan/3.png">
-
-		<h2>Switches de capa 2</h2>
-			<p> ESW2</p>
-			<img src="../Imagenes/vlan/4.png">
-			<img src="../Imagenes/vlan/5.png">
-			<p> ESW3</p>
-			<img src="../Imagenes/vlan/6.png">
-			<img src="../Imagenes/vlan/7.png">
-		<h2> Comprobar conexión entre vlan 110 y vlan 130 </h2>
-			<img src="../Imagenes/vlan/8.png">
+			<table id="tabla"   border="2px solid black" >
+				<tr>
+					<th>Sede</th>
+					<th>Area</th>
+					<th>Departamento</th>
+					<th>Número de <br> Oficinas</th>
+					<th>VLAN</th>
+				</tr>
+					<!-- Sede Central -->
+					<tr>
+						<th rowspan="10">Sede<br>Central<br></th>
+						<th rowspan="2" > Servicio de Informatica</th>
+						<td>Desarrollo y mantenimiento</td> 
+						<td> 3 </td> 
+						<td > VLAN - 10</td>
+					</tr>
+	
+							<tr>
+								<td>De Sistema y Red</td> 
+								<td> 2 </td>
+								<td > VLAN - 20</td> 
+							</tr>
+		
+						<tr>
+							<th rowspan="4">Oficina de Gerencias</td>
+							<td>Gerencia General</td>
+							<td>3</td>
+							<td > VLAN - 30</td>
+						</tr>
+							<tr>
+								<td>Gerencia de Transformación digital</td>
+								<td>4</td>
+								<td > VLAN - 40</td>
+							</tr>
+							<tr>
+								<td>Gerencia de Estrategias de clientes</td>
+								<td>6</td>
+								<td > VLAN - 50</td>
+							</tr>
+							<tr>
+								<td>Oficinas de apoyo a las gerencias</td>
+								<td>7</td>
+								<td > VLAN - 60</td>
+							</tr>
+					
+						<tr>
+							<th rowspan="4">Oficinas de Estrategias empresariales</td>
+							<td>Departamento de marketing</td>
+							<td>2</td>
+							<td > VLAN - 70</td>	
+						</tr>
+					
+							<tr>
+								<td>Departamento de Economia</td>
+								<td>4</td>
+								<td > VLAN - 80</td>
+							</tr>
+		
+							<tr>
+								<td>Departamento de Abogacia de la Empresa</td>
+								<td>1</td>
+								<td > VLAN - 90</td>
+							</tr>
+		
+							<tr>
+								<td>Departamento de Atención al cliente</td>
+								<td>2</td>
+								<td > VLAN - 100</td>
+							</tr>
+				
+					<!-- Sede Atencion al Cliente -->
+					<tr>
+						<th rowspan="8">Atencion<br>al cliente<br></th>
+						<th rowspan="3" >Atencion a serivicios empresariales</th>
+						<td>Departamento de empresas</td> 
+						<td> 2 </td> 
+						<td > VLAN - 110</td>
+					</tr>
+							<tr>
+								<td> Departamento de Soluciones Técnicas</td>
+								<td> 4</td>
+								<td > VLAN - 120</td>
+							</tr>
+							<tr>
+								<td> Departamento de seguimiento de clientes</td>
+								<td>2</td>
+								<td > VLAN - 130</td>
+							</tr>
+						
+						<tr>
+							<th rowspan="3" >Atención al Usuario</th>							<td>Departamento de atencion a usuarios</td> 
+							<td> 3 </td> 
+							<td > VLAN - 140</td>
+						</tr>
+							<tr>
+								<td>Departamento de nuevos clientes</td> 
+								<td> 2 </td>
+								<td > VLAN - 150</td> 
+							</tr>
+				
+							<tr>
+								<td>Departamento de Seguimiento de clientes</td> 
+								<td> 2 </td>
+								<td > VLAN - 160</td> 
+							</tr>
+						<tr>
+							<th rowspan="2" >Recursos Humanos</th>
+							<td>Departamento de Recursos Humanos de alto nivel</td> 
+							<td> 1 </td> 
+							<td > VLAN - 170</td>
+						</tr>
+							<tr>
+								<td>Departamento de Recursos Humanos de area</td> 
+								<td> 2 </td>
+								<td > VLAN - 180</td> 
+							</tr>
+					<!-- Sede Trujillo -->
+					<tr>	
+						<th rowspan="8">Sede<br>Trujillo</th>
+						<th rowspan="5"> Oficinas de Jefatura </th>
+						<td> Departamento de Marketing</td>
+						<td> 1  </td>
+						<td > VLAN - 210</td>
+					</tr>
+							<tr>
+								<td>Departamento de Economia</td>
+								<td>1</td>
+								<td > VLAN - 220</td>
+							</tr>
+							<tr>
+								<td>Departamento de Abogacia de la empresa</td>
+								<td>1</td>
+								<td > VLAN - 230</td>
+							</tr>
+							<tr>
+								<td>Departamento de Atencion al cliente</td>
+								<td>1</td>
+								<td > VLAN - 240</td>							
+							</tr>
+							<tr>
+								<td>Departamento de Informatica</td>
+								<td>1</td>
+								<td > VLAN - 250</td>
+							</tr>
+		
+					<tr>
+						<th rowspan="4">Estrategia Empresarial</th>
+						<td>Departamento de Empresas</td>
+						<td>1</td>
+						<td > VLAN - 240</td>
+					</tr>
+							<tr>
+								<td>Departamento de Clientes</td>
+								<td>1</td>
+								<td > VLAN - 250</td>
+							</tr>
+							<tr>
+								<td>Departamento de Seguimiento de clientes</td>
+								<td>2</td>
+								<td > VLAN - 260</td>
+							</tr>
+			</table>
 	</div>
+	<!-- Spanning Tree -->
+	<div>
+		<h1 class="titulo"> Spanning tree </h1>
 
-	<!-- Protocolos -->	
+	</div>
+	<!-- VPN -->
+	<div>
+		<h1 class="titulo"> VPN </h1>
+	</div>
+	</div>
+	<!-- Implementación  -->
+	<div>
+	<h1 class="titulos"> Implementación </h1>
 	<!-- Protocolos de enrutamiento  -->
 	<div class=" Enrrutamiento_Dinamico">
-		<h1 class="titulos"> Enrutamiento Dinamico</h1>
+		<h1 class="titulo"> Enrutamiento Dinamico</h1>
 		<!-- Sede Central -->
 		<div>
 			<h1 class="titulo">Sede Central</h1>
@@ -905,27 +1061,37 @@
 		</div>
 
 	</div>
-	<!-- Servicios de Red de la organización-->
-	<div class="Servicios">
-		<h1 class="titulos"> Servicios Ofrecidos </h1>
-		<ul>
-			<li> Servicio DDNS</li>
-			<li> Servicio DHCP</li>
-			<li> Servicio Web</li>
-			<li> Servicio FTP</li>
-			<li> Servicio de correo</li>
-			<li> Servicio de acceso Remoto</li>
-		</ul>
+	
+		
+		<!-- Servicios de Red de la organización-->
+		<div class="Servicios">
+			<h1 class="titulo"> Servicios Ofrecidos </h1>
+			<ul>
+				<li> Servicio DDNS</li>
+				<li> Servicio DHCP</li>
+				<li> Servicio Web</li>
+				<li> Servicio FTP</li>
+				<li> Servicio de correo</li>
+				<li> Servicio de acceso Remoto</li>
+			</ul>
+		</div>
+		<!-- Protocolos de seguridad -->
+		<div class="Protocolos_de_Seguridad">
+			<h1 class="titulo"> Protocolos de seguridad</h1>
+			<ul>
+				<li> Firewall</li>
+				<li> Proxy</li>
+				<li>Snort</li>
+			</ul>
+		</div>
 	</div>
-	<!-- Protocolos de seguridad -->
-	<div class="Protocolos_de_Seguridad">
-		<h1 class="titulos"> Protocolos de seguridad</h1>
+	<!-- Pruebas -->
+	<div>
+		<h1 class="titulos"> Pruebas</h1>
 		<ul>
-			<li> Firewall</li>
-			<li> Proxy</li>
-			<li>Snort</li>
+			<li>Pruebas de conexión</li>
+			<li>Análisis de trafico</li>
 		</ul>
-
 	</div>
 </body>
 </html>
