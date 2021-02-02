@@ -1,0 +1,47 @@
+
+-Auditoria de inventario
+	descripción de los equipos utilizados.
+-Auditoria de instalacion
+	tabla de servicios por departamento.
+-Auditoria Operacional
+	---
+-Auditoria de Eficiencia
+	--
+-Auditoria de seguridad
+	Que equipos estan protegidos.
+
+
+conexión lan ximena
+	-grafico lan
+
+direccionamiento ip  renzo
+	tablas de rangos de ip
+	
+politicas de enrutamiento 
+	comandos ospf
+	comandos bgp
+
+configuración de servicios y protocolos ospf y bgp
+	dhcp 
+	ddns
+	firewall
+	ospf bgp
+	vlan    daniel    
+	tunnel  
+	vpn
+	
+verificación del trafico e la red
+	wireshark -> paquetes que se generan de los servicios.
+Politicas de seguridad
+	tabla de protección de los departamentos (tabla firewall)
+software utilizado en los servidores
+	centos7 minimal.
+dimensionamiento
+	que hay para cada rack en el datacenter.
+bitacoras.
+
+explicación de fases
+
+
+
+	
