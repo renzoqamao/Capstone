@@ -114,7 +114,7 @@
             <td></td>
             <td>1</td>
             <td></td>
-            <td></td>
+            <td>5</td>
             <td></td>
         </tr>
         <tr>
@@ -123,7 +123,7 @@
             <td></td>
             <td>1</td>
             <td></td>
-            <td></td>
+            <td>3</td>
             <td></td>
         </tr>
         <tr>
@@ -132,35 +132,41 @@
             <td>4</td>
             <td>8</td>
             <td>6</td>
-            <td>23</td>
+            <td>31</td>
             <td>6</td>
         </tr>
     </table>
     
     <div>
         <h2>PC</h2>
-        <label> Dispositivos que poseen una tarjeta red y que se ubican en las oficinas cada departamento de las sede Central, Atención al Cliente y Trujillo. Estos dispositivos tienen el sistema operativo linux con CentOS7 como distribución. </label>
+				<label> Dispositivos que poseen una tarjeta red  ethernet para conexión cableada. Están ubicados en cada oficina y cuentan con un número de serie que indica en qué departamento pertenecen.</label>
         <br>
         <img src="/Imagenes/pc.jpg" width="200px"/>
     </div>
     
     <div>
-        <h2>Switch</h2>
-        <label> Dispositivos que se encuentran en la capa de acceso, que se encarga de controlar que dispositivos finales se pueden conectar a la red. </label>
+        <h2>Switch capa 2</h2>
+        <label> Se usa para ampliar la capacidad de conexiones con el switch multicapa. Ubicados 1 por piso de la sede central. Posee 200 interfaces para conectar a las pcs de las oficinas. Tiene un número de serie que indica a qué área pertenece. </label>
         <br>
         <img src="/Imagenes/switch.jpg" width="200px" />
         
     </div>
     
+    <div>
+        <h2>Switch multicapa</h2>
+				<label> Sirven para realizar el enrutamiento inter-vlan entre las subredes de cada área. Se cuenta con un switch por área. Cada uno cuenta con 48 interfaces. Tiene un número de serie que indica a qué área pertenece.</label>
+        <br>
+    </div>
     <div>  
         <h2>Router</h2>
-        <p> Dispositivos que se conectaran con la capa de acceso,que se encargarán de proveer funcionalidades de ruteo entre las diferentes subredes de la LAN, dividiendo los dominios de broadcast, por medio de VLAN.Como también existiran Routers para las conexiones WAN. Para el proyecto utilizamos un router cisco 3600 swtich de capa 3. </p>
+				<p>Se cuenta con 3 routers para las conexiones wan entre las sedes y 3 routers de borde para el acceso a internet. Ubicados en el primer piso de cada sede. Solo accesibles por el administrador. Tiene un número de serie que indica a qué sede pertenece.</p>
     </div>
     
     
     <div>
         <h2>Servidor</h2>
-        <label>Ubicados en la database del servicio de informatica, que almacena toda la información de la organización. Tambien existirán servidores de DHCP y DDNS en cada sede. Estos dispositivos tienen el sistema operativo linux con CentOS7 como distribución. </label>
+        <label>Los servidores que almacenan toda la información de la organización (web, ftp, smtp, propios de un departamento, propio de una oficina) se encuentran almacenados en un data center ubicado en la sede central. Este datacenter cuenta con un control de temperatura las 24 del día, un control de acceso y monitorización. Para el caso de los servidores DHCP y DDNS estos son almacenados en un rack ubicado en el primer piso de cada sede.</label>
+
         <br>
         <img src="/Imagenes/servidores.png" width="200px"/>
     </div>
