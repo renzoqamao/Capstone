@@ -1,0 +1,40 @@
+firewall .1
+ddns-dhcp .2
+ftp .3
+server .4
+email server .5
+----------------------
+area de servicios informaticos 
+	desarrollo server  .6
+	prueba     server  .7
+
+backup server .8
+------------------------
+Area de estrategias empresariales
+	Marketing oficina 1 server .11
+	Marketing oficina 2 server .12
+	Economia oficina 3 server .13
+	Economia oficina 4 server .14
+	Economia oficina 5 server .15
+	Economia oficina 6 server .16
+	Abogacia de la Empresa oficina 7 server .17
+	Atención al cliente oficina 8 server .18
+	Atención al cliente oficina 9 server .19
+backup server .20
+---------------------------
+Area de gerencias
+	servidor de información juridica .21
+	servidor de información administrativa .22
+	servidor de información empresarial e informatica .23
+backup server .24
+
+---------------------------------
+area de control - .30
+		   .31
+area de seguridad .35
+                  .36
+area de distribucion principal .41
+                               .42
+------------------------------------
+IP libres -> 45-60 
+		   
