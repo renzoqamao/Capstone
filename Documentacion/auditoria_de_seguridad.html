@@ -25,10 +25,10 @@
 	<h2>Firewall</h2>
 	<p>
 		 Hoy en día un Firewall es un hardware específico con un
-		 sistema oerativo, en nuestro caso Centos7, que filtra el<br>
+		 sistema operativo, en nuestro caso Centos7, que filtra el<br>
 		 tráfico TCP/UDP/ICMP/.../IP y decide si un paquete pasa,
 		 se modifica, se convierte o se descarta. Para que el<br>
-		 Firewall funciona como tal, contiene <b>3 tarjetas de red</b>
+		 Firewall funciona como tal, tiene <b>3 tarjetas de red</b>.
 		 De acuerdo con las necesidades de la red, se ha puesto<br>
 		 <b>2 firewalls</b> para establecer distintos perímetros de
 		 seguridad entorno al sistema. Se ha expuesto <b>3 servidores</b><br>
@@ -38,10 +38,24 @@
 	</p>
 	<img src="/Imagenes/fire.jpeg"/>
 	<p>
+		Con esta arquitectura, permitimos que los servidores sea accesible
+		desde Internet, de tal forma que si es atacado y se gana acceso a él,<br>
+		la red local sigue protegida por el firewall. Cada firewall tiene 
+		funciones específicas.<br>
+		<b>Firewall 1</b>
+		
+		<p>- Habilitar el acceso a puertos de administración a determinadas
+				IPs priviliegiadas</p>
+		
+		<br>
+		<b>Firewall 2</b>
+	
+		<p>- Habilitar el acceso a puertos de administración a determinadas
+				IPs priviliegiadas</p>
+		
+		
 
 	</p>
-		
-	
 	</center>
 </body>
 </html>

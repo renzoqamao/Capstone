@@ -1,33 +1,38 @@
-firewall .1
-ddns-dhcp .2
-ftp .3
-server .4
-email server .5
-web 
+firewall1 192.168.1.1/26
+firewall2 192.168.2.218/29
+---------------------------
+DMZ
+ftp 192.168.2.218
+email server 192.168.2.220
+web  192.168.2.221
+--------------------------
+DATACENTER
+ddns-dhcp 192.168.1.2/26
+servidor ssh 192.168.1.3/26
 ----------------------
 area de servicios informaticos 
-	desarrollo server  .6
-	prueba     server  .7
+	desarrollo server  192.168.1.4/26
+	prueba     server  192.168.1.5/26
 
-backup server .8
+ backup server del area de servicio informaticos 192.168.1.6/26
 ------------------------
 Area de estrategias empresariales
-	Marketing oficina 1 server .11
-	Marketing oficina 2 server .12
-	Economia oficina 3 server .13
-	Economia oficina 4 server .14
-	Economia oficina 5 server .15
-	Economia oficina 6 server .16
-	Abogacia de la Empresa oficina 7 server .17
-	Atención al cliente oficina 8 server .18
-	Atención al cliente oficina 9 server .19
-backup server .20
+	Marketing oficina 1 server 192.168.1.7/26
+	Marketing oficina 2 server 192.168.1.8/26
+	Economia oficina 3 server  192.168.1.9/26
+	Economia oficina 4 server  192.168.1.10/26
+	Economia oficina 5 server  192.168.1.11/26
+	Economia oficina 6 server  192.168.1.12/26
+	Abogacia de la Empresa oficina 7 server 192.168.1.13/26
+	Atención al cliente oficina 8 server 192.168.1.14/26
+	Atención al cliente oficina 9 server 192.168.1.15/26
+backup server 192.168.1.16/26
 ---------------------------
 Area de gerencias
-	servidor de información juridica .21
-	servidor de información administrativa .22
-	servidor de información empresarial e informatica .23
-backup server .24
+	servidor de información juridica 192.168.1.17/26
+	servidor de información administrativa 192.168.1.18/26
+	servidor de información empresarial e informatica 192.168.1.19/26
+backup server 192.168.1.20/26
 
 ---------------------------------
 area de control - .30
