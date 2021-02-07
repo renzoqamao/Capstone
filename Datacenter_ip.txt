@@ -3,6 +3,7 @@ ddns-dhcp .2
 ftp .3
 server .4
 email server .5
+web 
 ----------------------
 area de servicios informaticos 
 	desarrollo server  .6
