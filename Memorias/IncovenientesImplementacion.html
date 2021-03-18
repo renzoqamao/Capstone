@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div class="encabezado">
-		<p> <img class="imagen" src="/Imagenes/UNI.png"></p>
+		<p> <img class="imagen" src="../Imagenes/UNI.png"></p>
 	</div>
 	<div class="curso">
         <p> <br><br><br>
@@ -33,24 +33,27 @@
 			usando tuberia UDP.
 		</p>
 		<h2>La cantidad de IP que se tiene que asignar a los distintos host</h2>
-		<h3>Solución:</h3>
+		<p>Solución:</p>
 		<p>
 			Se aplicó el concepto de subneting para designar el rango de IP para cada sede (Trujillo, Central, Atención al Cliente) 
 			y luego se realizó subneteo VLSM para cada sede.
 		</p>
-		<h2>Inconveniencia con el Router</h2>
-		<p>El routers <strong>(C3725)</strong> que establecimos al comienzo en cada sede tenían pocos interfaces que venia por defectos .</p>
-		<h3>Solución:</h2>
-		<p>Se buscó otro Router que tenía mas interfaces para la conexiones que necesitabamos en cada sede, el Router que elegimos 
-			fue <strong>C7200</strong> </p>
-		<h2>Topologia</h2>
+		<h2>Topología</h2>
 		<p>
-			Para la realización de la topologia se analizó primero la topologia lógica, pero no se tuvo encuenta la topologia física, entonces al concluir 
+			Para la realización de la topología se analizó primero la topologia lógica, pero no se tuvo encuenta la topologia física, entonces al concluir 
 			la topologia lógica pasamos a la topologia física donde se observó algunos inconveniencias. 
 		</p>
-		<h3>Solución:</h3>
+		<p>Solución:</p>
 		<p>Se decidió realizar la topología física y partiendo de ella se realizó algunas modificaciones en la topología lógica</p>
-	</div>
-
+		
+		<h2>Muchos dispositivos de red</h2>
+		<p> Solución:	</p>
+		<p> Se cambio el router de área por un switch multicapa el cual permite tener diferentes 
+			redes mediante el uso de vlan. Con ello se elimino la necesidad de tener un switch por cada subred</p>
+		<h2>Enrutamiento dinámico en el firewall</h2>
+		<p>Solución</p>
+		<p> Se usó la herramienta quagga  para el enrutamiento OSPF y BGP en el firewall de la sede Central que protege el datacenter. </p>	
+		</div>
+		
 </body>
 </html>

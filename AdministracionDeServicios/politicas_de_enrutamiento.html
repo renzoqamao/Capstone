@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="encabezado">
-        <p> <img class="imagen" src="/Imagenes/UNI.png"></p>
+        <p> <img class="imagen" src="../Imagenes/UNI.png"></p>
     </div>
     <div class="curso">
         <p> <br><br><br>
@@ -21,6 +21,53 @@
     </div> 
     <hr>
     <!-- fin de encabezado -->
-    
-</body>
-</html>
+
+    <div class="enrutamiento">
+        <h1> Enrutamiento dinámico</h1>
+            <p>Para una mejor administración de la red  de la empresa se optó por el uso del protocolo de 
+                enrutamiento dinámico OSPF dentro de una sede y BGP para la comunicación entre estas sedes. 
+                Solo para el caso del acceso a internet se usó un enrutamiento estático.  </p>
+            <p>Por otro lado, mediante el protocolo BGP solo se anuncia las subredes necesarias a los demás 
+                sistemas autónomos (sedes).</p>
+            <p>Como ejemplo se va ha mostrar las configuraciones hechas en la sede central.</p>
+            <img src="../Imagenes/bgp/topologia_bgp.jpeg">
+            <h2>BGP</h2>
+                <p> Creación del loopback</p>
+                <img src="../Imagenes/bgp/lookback.png">
+                <p> Se crea una sesión iBGP, eBGP con las demás sedes, se anuncia las redes que quieres
+                     que conozcan las demás sedes y finalmente se informa a los switch multicapas que si 
+                     quieren acceder a una red externa tienen que pasar el router de la sede central.
+                </p>
+                <img src="../Imagenes/bgp/comandos.jpeg">
+                <p>Verificamos las redes aprendidas en la tabla de enrutamiento
+                </p>
+                <img src="../Imagenes/bgp/iproutebgp.png">
+            <h2>OSPF</h2> 
+
+                <p> Se crea un id para el router,  generamos una relación de adyacencia con los routers vecinos y se indica el área al que pertenece.
+                </p>
+                <img src="../Imagenes/ospf/OSPF-AREA0-Area_servicio_informatica.png">
+            <h2> PBR </h2>
+                <p>Para que el sistema tenga tolerancia a fallos se establecieron 
+                    enlaces redundantes entre switch multicapa y router. Además, 
+                    se dividió el tráfico saliente del switch multicapa donde una
+                     parte pasa por un enlace y el resto por el otro enlace. 
+                     Como ejemplo se muestra al área de atención a servicios 
+                     empresariales.
+                </p>
+                <img src="../Imagenes/politicaEnrutamiento/pbrAreaAtencionSE.jpeg">
+                <p> Se crea una lista de acceso donde se define a qué tráfico se
+                     le va aplicar la política.</p>
+                     <img src="../Imagenes/politicaEnrutamiento/lista_acceso.png">
+                <p>Con route-map se indica que se debe hacer con el tráfico establecido en la política. Para nuestro caso vlan 110 y 130 irán por la interfaz 1 y vlan 120 por la interfaz 2.
+                </p>
+                <img src="../Imagenes/politicaEnrutamiento/route-map.png">
+                <p>Y finalmente  se aplican las políticas en la interfaz de origen ( donde se recibe el tráfico). 
+                </p>
+                <img src="../Imagenes/politicaEnrutamiento/policy.png">
+
+                <p>Verificando la ruta del tráfico</p>
+                <img src="../Imagenes/politicaEnrutamiento/rutas.jpeg">
+            </div>
+        </body>
+        </html>

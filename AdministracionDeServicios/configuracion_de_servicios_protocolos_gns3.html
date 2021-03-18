@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="encabezado">
-        <p> <img class="imagen" src="/Imagenes/UNI.png"></p>
+        <p> <img class="imagen" src="../Imagenes/UNI.png"></p>
     </div>
     <div class="curso">
         <p> <br><br><br>
@@ -21,6 +21,49 @@
     </div> 
     <hr>
     <!-- fin de encabezado -->
+    <div id="vlan">
+        <h1 class="titulo"> VLAN </h1>
+		<p>	Cada departamento está en un subred diferente. Para una mayor escalabilidad se optó por usar vlan para cada subred. Para ello se usó un switch de capa 3 (por cada área) encargado de asignar los vlan y del enrutamiento inter-vlan.</p>
+		<p> Como ejemplo se va ha mostrar las configuraciones realizadas en el área de atenciones empresariales de la sede atención al cliente. </p>
+		<p> Vlan por área </p>
+		<img src="../Imagenes/vlan/vlan-Area-Atencion-SE.png"/>
+		<p> Interfaces Vlan </p>
+		<img src="../Imagenes/vlan/interfaces-vlan.png"/>
+		<p> Enrutamiento entre vlan </p>
+		<img src="../Imagenes/vlan/iprouting.png"/>
+		<p> Conexión entre vlan 110 y 130 </p>
+		<img src="../Imagenes/vlan/comprobacion.png"/>
+    </div>
+    <div id="dhcp" >
+        <h2>DHCP</h2>
+        <h2>Para el DHCP se generó una llave para poder comunicarse con el DDNS </h2>
+        <img  src="../Imagenes/servidor-DDNS/llave.png" />
+        <img  src="../Imagenes/servidor-DDNS/llave2.png" />
+        <p>Luego se configura el fichero dhcp.conf. con los dominios y las zonas para el DNS así cada vez que un cliente solicite una ip , el servidor tambien enviará el dominio del DNS que se le asigno.</p>
+        <img  src="../Imagenes/servidor-DHCP/confdhcp.png">
+        <img  src="../Imagenes/servidor-DHCP/confdhcp2.png">
+        <img  src="../Imagenes/servidor-DHCP/confdhcp3.png">
+    </div>
+    <div  id="ddns" >
+        <h2> DDNS</h2>
+        <p>  Para el DDNS  se instaló el paquete Bind9 , Para la comunicación entre DHCP y DDNS se generó una llave. </p>
+        <img  src="../Imagenes/servidor-DDNS/llave.png" />
     
+        <img  src="../Imagenes/servidor-DDNS/llave3.png" />
+        <p> Luego configuramos el archivo named.conf </p>
+        <img  src="../Imagenes/servidor-DDNS/named.conf1.png" />
+
+        <img  src="../Imagenes/servidor-DDNS/named.conf2.png" />
+
+        <img  src="../Imagenes/servidor-DDNS/named.conf3.png" />
+
+        <p> creamos una base de datos para la zona directa </p>
+        <img  src="../Imagenes/servidor-DDNS/zonadirecta.png" />
+        <p> creamos una base de datos para la zona derecha </p>
+        <img  src="../Imagenes/servidor-DDNS/zonainversa.png" />
+    </div>
+    
+   
+   
 </body>
 </html>

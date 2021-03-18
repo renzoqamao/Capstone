@@ -7,7 +7,7 @@
 </head>
 <body>
 	<div class="encabezado">
-		<p> <img class="imagen" src="/Imagenes/UNI.png"></p>	
+		<p> <img class="imagen" src="../Imagenes/UNI.png"></p>	
 	</div>
 	<div class="curso">
         <p> <br><br><br>
@@ -36,23 +36,609 @@
 		 servidores en un lugar apartado de la red, al que denominamos <br>
 		 <b>zona desmilitarizada o DMZ</b>.<br>
 	</p>
-	<img src="/Imagenes/fire.jpeg"/>
+	<img src="../Imagenes/fire.jpeg"/>
 	<p>
 		Con esta arquitectura, permitimos que los servidores sea accesible
 		desde Internet, de tal forma que si es atacado y se gana acceso a él,<br>
 		la red local sigue protegida por el firewall. Cada firewall tiene 
-		funciones específicas.<br>
-		<b>Firewall 1</b>
+		funciones específicas así como reglas de permitir o denegar acceso a ciertas áreas.<br>
+		Una de las funciones principales de los firewalls es habilitar el acceso a puertos de 
+		administración a determinadas IPs priviliegiadas.<br>
+		A continucación se describen en las tablas las reglas que se ha configurado en cada Firewall.<br><br>
+		<h2>Firewall 1 (Externo)</h2>	
 		
-		<p>- Habilitar el acceso a puertos de administración a determinadas
-				IPs priviliegiadas</p>
-		
+				<style type="text/css">
+					.tg  {border-collapse:collapse;border-spacing:0;}
+					.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+					  overflow:hidden;padding:10px 5px;word-break:normal;}
+					.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+					  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+					.tg .tg-jxgv{background-color:#FFF;border-color:inherit;text-align:left;vertical-align:top}
+					.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+					.tg .tg-dvpl{border-color:inherit;text-align:right;vertical-align:top}
+					</style>
+					<table class="tg">
+					<thead>
+					  <tr>
+						<th class="tg-0pky">tipo</th>
+						<th class="tg-0pky">N</th>
+						<th class="tg-0pky">ACCIÓN</th>
+						<th class="tg-0pky">ORIGEN</th>
+						<th class="tg-0pky">Puerto ORIGEN</th>
+						<th class="tg-0pky">DESTINO</th>
+						<th class="tg-0pky">Puerto DESTINO</th>
+						<th class="tg-0pky">INDIC.</th>
+						<th class="tg-0pky">DESCRIPCIÓN</th>
+					  </tr>
+					</thead>
+					<tbody>
+					  <tr>
+						<td class="tg-0pky">interntet--Servidor (E)</td>
+						<td class="tg-dvpl">1</td>
+						<td class="tg-0pky">Permitir</td>
+						<td class="tg-0pky">*</td>
+						<td class="tg-0pky">*</td>
+						<td class="tg-0pky">192.168.2.220</td>
+						<td class="tg-dvpl">25</td>
+						<td class="tg-0pky">tcp</td>
+						<td class="tg-jxgv">Solicitud a SMTP</td>
+					  </tr>
+					  <tr>
+						<td class="tg-0pky">interntet--Servidor (E)</td>
+						<td class="tg-dvpl">2</td>
+						<td class="tg-0pky">Permitir</td>
+						<td class="tg-0pky">*</td>
+						<td class="tg-0pky">*</td>
+						<td class="tg-0pky">192.168.2.221</td>
+						<td class="tg-dvpl">80</td>
+						<td class="tg-0pky">tcp</td>
+						<td class="tg-jxgv">Solicitud a HTTP</td>
+					  </tr>
+					  <tr>
+						<td class="tg-0pky">interntet--Servidor (E)</td>
+						<td class="tg-dvpl">3</td>
+						<td class="tg-0pky">Permitir</td>
+						<td class="tg-0pky">*</td>
+						<td class="tg-0pky">*</td>
+						<td class="tg-0pky">192.168.2.218</td>
+						<td class="tg-dvpl">20</td>
+						<td class="tg-0pky">tcp</td>
+						<td class="tg-jxgv"><span style="color:#000;background-color:#FFF">Solicitud a FTP</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-0pky">interntet--Servidor (E)</td>
+						<td class="tg-dvpl">4</td>
+						<td class="tg-0pky">Permitir</td>
+						<td class="tg-0pky">*</td>
+						<td class="tg-0pky">*</td>
+						<td class="tg-0pky">192.168.2.218</td>
+						<td class="tg-dvpl">21</td>
+						<td class="tg-0pky">tcp</td>
+						<td class="tg-jxgv"><span style="color:#000;background-color:#FFF">Solicitud a FTP</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-0pky">interntet--Servidor (E)</td>
+						<td class="tg-dvpl">5</td>
+						<td class="tg-0pky">Permitir</td>
+						<td class="tg-0pky">192.168.2.220</td>
+						<td class="tg-dvpl">25</td>
+						<td class="tg-0pky">*</td>
+						<td class="tg-0pky">*</td>
+						<td class="tg-0pky">tcp</td>
+						<td class="tg-jxgv">Respuesta&nbsp;&nbsp;SMTP</td>
+					  </tr>
+					  <tr>
+						<td class="tg-0pky">interntet--Servidor (E)</td>
+						<td class="tg-dvpl">6</td>
+						<td class="tg-0pky">Permitir</td>
+						<td class="tg-0pky">192.168.2.221</td>
+						<td class="tg-dvpl">80</td>
+						<td class="tg-0pky">*</td>
+						<td class="tg-0pky">*</td>
+						<td class="tg-0pky">tcp</td>
+						<td class="tg-jxgv">Respuesta&nbsp;&nbsp;HTTP</td>
+					  </tr>
+					  <tr>
+						<td class="tg-0pky">interntet--Servidor (E)</td>
+						<td class="tg-dvpl">7</td>
+						<td class="tg-0pky">Permitir</td>
+						<td class="tg-0pky">192.168.2.218</td>
+						<td class="tg-dvpl">20</td>
+						<td class="tg-0pky">*</td>
+						<td class="tg-0pky">*</td>
+						<td class="tg-0pky">tcp</td>
+						<td class="tg-jxgv"><span style="color:#000;background-color:#FFF">Respuesta&nbsp;&nbsp;FTP</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-0pky">interntet--Servidor (E)</td>
+						<td class="tg-dvpl">8</td>
+						<td class="tg-0pky">Permitir</td>
+						<td class="tg-0pky">192.168.2.218</td>
+						<td class="tg-dvpl">21</td>
+						<td class="tg-0pky">*</td>
+						<td class="tg-0pky">*</td>
+						<td class="tg-0pky">tcp</td>
+						<td class="tg-jxgv"><span style="color:#000;background-color:#FFF">Respuesta&nbsp;&nbsp;FTP</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-0pky">lan -- Internet</td>
+						<td class="tg-dvpl">9</td>
+						<td class="tg-0pky">Permitir</td>
+						<td class="tg-0pky">192.168.0.0/22</td>
+						<td class="tg-0pky">*</td>
+						<td class="tg-0pky">*</td>
+						<td class="tg-dvpl">80</td>
+						<td class="tg-0pky">tcp</td>
+						<td class="tg-0pky">Solicitud al HTTP externo</td>
+					  </tr>
+					  <tr>
+						<td class="tg-0pky">lan -- Internet</td>
+						<td class="tg-dvpl">10</td>
+						<td class="tg-0pky">Permitir</td>
+						<td class="tg-0pky">192.168.0.0/22</td>
+						<td class="tg-0pky">*</td>
+						<td class="tg-0pky">*</td>
+						<td class="tg-dvpl">443</td>
+						<td class="tg-0pky">tcp</td>
+						<td class="tg-0pky">Solicitud al HTTPS externo</td>
+					  </tr>
+					  <tr>
+						<td class="tg-0pky">lan -- Internet</td>
+						<td class="tg-dvpl">11</td>
+						<td class="tg-0pky">Permitir</td>
+						<td class="tg-0pky">*</td>
+						<td class="tg-dvpl">80</td>
+						<td class="tg-jxgv"><span style="color:#000;background-color:#FFF">192.168.0.0/22</span></td>
+						<td class="tg-0pky">*</td>
+						<td class="tg-0pky">tcp</td>
+						<td class="tg-0pky">Respuesta al HTTP externo</td>
+					  </tr>
+					  <tr>
+						<td class="tg-0pky">lan -- Internet</td>
+						<td class="tg-dvpl">12</td>
+						<td class="tg-0pky">Permitir</td>
+						<td class="tg-0pky">*</td>
+						<td class="tg-dvpl">443</td>
+						<td class="tg-jxgv"><span style="color:#000;background-color:#FFF">192.168.0.0/22</span></td>
+						<td class="tg-0pky">*</td>
+						<td class="tg-0pky">tcp</td>
+						<td class="tg-0pky">Respuesta al HTTPS externo</td>
+					  </tr>
+					  <tr>
+						<td class="tg-0pky"></td>
+						<td class="tg-dvpl">13</td>
+						<td class="tg-0pky">Rechazar</td>
+						<td class="tg-0pky">*</td>
+						<td class="tg-0pky">*</td>
+						<td class="tg-0pky">*</td>
+						<td class="tg-0pky">*</td>
+						<td class="tg-0pky"></td>
+						<td class="tg-0pky">Rechazar cualquier otra conexión</td>
+					  </tr>
+					</tbody>
+					</table>
+
+
 		<br>
-		<b>Firewall 2</b>
-	
-		<p>- Habilitar el acceso a puertos de administración a determinadas
-				IPs priviliegiadas</p>
+		<br>
+		<h2>Firewall 2 (Interno)</h2>
 		
+				<style type="text/css">
+					.tg  {border-collapse:collapse;border-spacing:0;}
+					.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+					  overflow:hidden;padding:10px 5px;word-break:normal;}
+					.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+					  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+					.tg .tg-2b7s{text-align:right;vertical-align:bottom}
+					.tg .tg-gd2f{background-color:#FFF;border-color:inherit;text-align:left;vertical-align:bottom}
+					.tg .tg-jxgv{background-color:#FFF;border-color:inherit;text-align:left;vertical-align:top}
+					.tg .tg-za14{border-color:inherit;text-align:left;vertical-align:bottom}
+					.tg .tg-jkyp{border-color:inherit;text-align:right;vertical-align:bottom}
+					.tg .tg-7zrl{text-align:left;vertical-align:bottom}
+					.tg .tg-kcps{background-color:#FFF;text-align:left;vertical-align:bottom}
+					</style>
+					<table class="tg">
+					<thead>
+					  <tr>
+						<th class="tg-za14">tipo</th>
+						<th class="tg-za14">N</th>
+						<th class="tg-za14">ACCIÓN</th>
+						<th class="tg-za14">ORIGEN</th>
+						<th class="tg-za14">Puerto ORIGEN</th>
+						<th class="tg-za14">DESTINO</th>
+						<th class="tg-za14">Puerto DESTINO</th>
+						<th class="tg-za14">INDIC.</th>
+						<th class="tg-za14">DESCRIPCIÓN</th>
+					  </tr>
+					</thead>
+					<tbody>
+					  <tr>
+						<td class="tg-za14">Lan -- Servidor (E)</td>
+						<td class="tg-jkyp">1</td>
+						<td class="tg-za14">Rechazar</td>
+						<td class="tg-za14">192.168.1.0/26</td>
+						<td class="tg-za14">*</td>
+						<td class="tg-za14">192.168.2.216/29</td>
+						<td class="tg-za14">*</td>
+						<td class="tg-za14"></td>
+						<td class="tg-jxgv">Rechazar acceso a servidores externos por parte servidores internos</td>
+					  </tr>
+					  <tr>
+						<td class="tg-za14">Lan -- Servidor (E)</td>
+						<td class="tg-jkyp">2</td>
+						<td class="tg-za14">Permitir</td>
+						<td class="tg-za14">*</td>
+						<td class="tg-za14">*</td>
+						<td class="tg-za14">192.168.2.220</td>
+						<td class="tg-jkyp">25</td>
+						<td class="tg-za14">tcp</td>
+						<td class="tg-gd2f"><span style="color:#000;background-color:#FFF">Solicitud a SMTP</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-za14">Lan -- Servidor (E)</td>
+						<td class="tg-jkyp">3</td>
+						<td class="tg-za14">Permitir</td>
+						<td class="tg-za14">*</td>
+						<td class="tg-za14">*</td>
+						<td class="tg-za14">192.168.2.221</td>
+						<td class="tg-jkyp">80</td>
+						<td class="tg-za14">tcp</td>
+						<td class="tg-gd2f"><span style="color:#000;background-color:#FFF">Solicitud a HTTP</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-za14">Lan -- Servidor (E)</td>
+						<td class="tg-jkyp">4</td>
+						<td class="tg-za14">Permitir</td>
+						<td class="tg-za14">*</td>
+						<td class="tg-za14">*</td>
+						<td class="tg-za14">192.168.2.218</td>
+						<td class="tg-jkyp">20</td>
+						<td class="tg-za14">tcp</td>
+						<td class="tg-gd2f"><span style="color:#000;background-color:#FFF">Solicitud a FTP</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-za14">Lan -- Servidor (E)</td>
+						<td class="tg-jkyp">5</td>
+						<td class="tg-za14">Permitir</td>
+						<td class="tg-za14">*</td>
+						<td class="tg-za14">*</td>
+						<td class="tg-za14">192.168.2.218</td>
+						<td class="tg-jkyp">21</td>
+						<td class="tg-za14">tcp</td>
+						<td class="tg-gd2f"><span style="color:#000;background-color:#FFF">Solicitud a FTP</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-za14">Lan -- Servidor (E)</td>
+						<td class="tg-jkyp">6</td>
+						<td class="tg-za14">Permitir</td>
+						<td class="tg-za14">192.168.2.220</td>
+						<td class="tg-jkyp">25</td>
+						<td class="tg-za14">*</td>
+						<td class="tg-za14">*</td>
+						<td class="tg-za14">tcp</td>
+						<td class="tg-gd2f"><span style="color:#000;background-color:#FFF">Respuesta&nbsp;&nbsp;SMTP</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-za14">Lan -- Servidor (E)</td>
+						<td class="tg-jkyp">7</td>
+						<td class="tg-za14">Permitir</td>
+						<td class="tg-za14">192.168.2.221</td>
+						<td class="tg-jkyp">80</td>
+						<td class="tg-za14">*</td>
+						<td class="tg-za14">*</td>
+						<td class="tg-za14">tcp</td>
+						<td class="tg-gd2f"><span style="color:#000;background-color:#FFF">Respuesta&nbsp;&nbsp;HTTP</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-za14">Lan -- Servidor (E)</td>
+						<td class="tg-jkyp">8</td>
+						<td class="tg-za14">Permitir</td>
+						<td class="tg-za14">192.168.2.218</td>
+						<td class="tg-jkyp">20</td>
+						<td class="tg-za14">*</td>
+						<td class="tg-za14">*</td>
+						<td class="tg-za14">tcp</td>
+						<td class="tg-gd2f"><span style="color:#000;background-color:#FFF">Respuesta&nbsp;&nbsp;FTP</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-za14">Lan -- Servidor (E)</td>
+						<td class="tg-jkyp">9</td>
+						<td class="tg-za14">Permitir</td>
+						<td class="tg-za14">192.168.2.218</td>
+						<td class="tg-jkyp">21</td>
+						<td class="tg-za14">*</td>
+						<td class="tg-za14">*</td>
+						<td class="tg-za14">tcp</td>
+						<td class="tg-gd2f"><span style="color:#000;background-color:#FFF">Respuesta&nbsp;&nbsp;FTP</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-za14">lan -- Internet</td>
+						<td class="tg-jkyp">10</td>
+						<td class="tg-za14">Permitir</td>
+						<td class="tg-za14">192.168.0.0/22</td>
+						<td class="tg-za14">*</td>
+						<td class="tg-za14">*</td>
+						<td class="tg-jkyp">80</td>
+						<td class="tg-za14">tcp</td>
+						<td class="tg-za14">Solicitud al HTTP externo</td>
+					  </tr>
+					  <tr>
+						<td class="tg-za14">lan -- Internet</td>
+						<td class="tg-jkyp">11</td>
+						<td class="tg-za14">Permitir</td>
+						<td class="tg-za14">192.168.0.0/22</td>
+						<td class="tg-za14">*</td>
+						<td class="tg-gd2f">*</td>
+						<td class="tg-jkyp">443</td>
+						<td class="tg-za14"></td>
+						<td class="tg-za14">Solicitud al HTTPS externo</td>
+					  </tr>
+					  <tr>
+						<td class="tg-za14">lan -- Internet</td>
+						<td class="tg-jkyp">12</td>
+						<td class="tg-za14">Permitir</td>
+						<td class="tg-za14">*</td>
+						<td class="tg-jkyp">80</td>
+						<td class="tg-gd2f"><span style="color:#000;background-color:#FFF">192.168.0.0/22</span></td>
+						<td class="tg-za14">*</td>
+						<td class="tg-za14">tcp</td>
+						<td class="tg-za14">Respuesta al HTTP externo</td>
+					  </tr>
+					  <tr>
+						<td class="tg-za14">lan -- Internet</td>
+						<td class="tg-jkyp">13</td>
+						<td class="tg-za14">Permitir</td>
+						<td class="tg-za14">*</td>
+						<td class="tg-jkyp">443</td>
+						<td class="tg-gd2f"><span style="color:#000;background-color:#FFF">192.168.0.0/22</span></td>
+						<td class="tg-za14">*</td>
+						<td class="tg-za14">tcp</td>
+						<td class="tg-za14">Respuesta al HTTPS externo</td>
+					  </tr>
+					  <tr>
+						<td class="tg-7zrl">Lan -- Servidor (I)</td>
+						<td class="tg-2b7s">14</td>
+						<td class="tg-7zrl">Permitir</td>
+						<td class="tg-7zrl">192.168.0.0/22</td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl">192.168.1.2</td>
+						<td class="tg-2b7s">53</td>
+						<td class="tg-7zrl">udp</td>
+						<td class="tg-7zrl">Solicitud a DDNS por Sede central</td>
+					  </tr>
+					  <tr>
+						<td class="tg-7zrl">Lan -- Servidor (I)</td>
+						<td class="tg-2b7s">15</td>
+						<td class="tg-7zrl">Permitir</td>
+						<td class="tg-7zrl">192.168.0.0/22</td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl">192.168.1.2</td>
+						<td class="tg-2b7s">67</td>
+						<td class="tg-7zrl">udp</td>
+						<td class="tg-7zrl">Solicitud a DHCP por Sede central</td>
+					  </tr>
+					  <tr>
+						<td class="tg-7zrl">Lan -- Servidor (I)</td>
+						<td class="tg-2b7s">16</td>
+						<td class="tg-7zrl">Permitir</td>
+						<td class="tg-7zrl">192.168.1.2</td>
+						<td class="tg-2b7s">53</td>
+						<td class="tg-kcps"><span style="color:#000;background-color:#FFF">192.168.0.0/22</span></td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl">udp</td>
+						<td class="tg-kcps"><span style="color:#000;background-color:#FFF">Respuesta DDNS a Sede central</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-7zrl">Lan -- Servidor (I)</td>
+						<td class="tg-2b7s">17</td>
+						<td class="tg-7zrl">Permitir</td>
+						<td class="tg-7zrl">192.168.1.2</td>
+						<td class="tg-2b7s">67</td>
+						<td class="tg-kcps"><span style="color:#000;background-color:#FFF">192.168.0.0/22</span></td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl">upd</td>
+						<td class="tg-7zrl">Respuesata DHCP a Sede Central</td>
+					  </tr>
+					  <tr>
+						<td class="tg-7zrl">Lan -- Servidor (I)</td>
+						<td class="tg-2b7s">18</td>
+						<td class="tg-7zrl">Permitir</td>
+						<td class="tg-7zrl">192.168.2.54/27, 192.168.2.128/27</td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-kcps"><span style="color:#000;background-color:#FFF">192.168.1.0/26</span></td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl"></td>
+						<td class="tg-7zrl">S.I Accede a todos los servidores internos</td>
+					  </tr>
+					  <tr>
+						<td class="tg-7zrl">Lan -- Servidor (I)</td>
+						<td class="tg-2b7s">19</td>
+						<td class="tg-7zrl">Permitir</td>
+						<td class="tg-7zrl">192.168.2.54/27, 192.168.2.128/27</td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl">192.168.1.4</td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl"></td>
+						<td class="tg-7zrl">S.I Accede a servidor desarrollo</td>
+					  </tr>
+					  <tr>
+						<td class="tg-7zrl">Lan -- Servidor (I)</td>
+						<td class="tg-2b7s">20</td>
+						<td class="tg-7zrl">Permitir</td>
+						<td class="tg-7zrl">192.168.2.54/27, 192.168.2.128/27</td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl">192.168.1.5</td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl"></td>
+						<td class="tg-7zrl">S.I Accede a servidor prueba</td>
+					  </tr>
+					  <tr>
+						<td class="tg-7zrl">Lan -- Servidor (I)</td>
+						<td class="tg-2b7s">21</td>
+						<td class="tg-7zrl">Permitir</td>
+						<td class="tg-7zrl">192.168.1.128/26, 192.168.1.64/26, 192.168.2.96/27</td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl">192.168.1.21</td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl"></td>
+						<td class="tg-7zrl">Acceso a servidor información jurídica </td>
+					  </tr>
+					  <tr>
+						<td class="tg-7zrl">Lan -- Servidor (I)</td>
+						<td class="tg-2b7s">22</td>
+						<td class="tg-7zrl">Permitir</td>
+						<td class="tg-kcps"><span style="color:#000;background-color:#FFF">192.168.1.128/26, 192.168.1.64/26, 192.168.2.96/27</span></td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-kcps"><span style="color:#000;background-color:#FFF">192.168.1.22</span></td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl"></td>
+						<td class="tg-kcps"><span style="color:#000;background-color:#FFF">Acceso a servidor información administrativa</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-7zrl">Lan -- Servidor (I)</td>
+						<td class="tg-2b7s">23</td>
+						<td class="tg-7zrl">Permitir</td>
+						<td class="tg-7zrl">192.168.0.128/25</td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl">192.168.1.23</td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl"></td>
+						<td class="tg-7zrl">Acceso a servicios de información empresarial e informática</td>
+					  </tr>
+					  <tr>
+						<td class="tg-7zrl">Lan -- Servidor (I)</td>
+						<td class="tg-2b7s">24</td>
+						<td class="tg-7zrl">Permitir</td>
+						<td class="tg-7zrl">192.168.1.192/26</td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl">192.168.1.11-12</td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl"></td>
+						<td class="tg-7zrl">Acceso a S. Dpto Marketing</td>
+					  </tr>
+					  <tr>
+						<td class="tg-7zrl">Lan -- Servidor (I)</td>
+						<td class="tg-2b7s">25</td>
+						<td class="tg-7zrl">Permitir</td>
+						<td class="tg-kcps"><span style="color:#000;background-color:#FFF">192.168.0.0/25</span></td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-kcps"><span style="color:#000;background-color:#FFF">192.168.1.13-16</span></td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl"></td>
+						<td class="tg-kcps"><span style="color:#000;background-color:#FFF">Acceso a S. Dpto Economia</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-7zrl">Lan -- Servidor (I)</td>
+						<td class="tg-2b7s">26</td>
+						<td class="tg-7zrl">Permitir</td>
+						<td class="tg-kcps"><span style="color:#000;background-color:#FFF">192.168.2.160/27</span></td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-kcps"><span style="color:#000;background-color:#FFF">192.168.1.17</span></td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl"></td>
+						<td class="tg-kcps"><span style="color:#000;background-color:#FFF">Acceso a S. Dpto Abogacia</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-7zrl">Lan -- Servidor (I)</td>
+						<td class="tg-2b7s">27</td>
+						<td class="tg-7zrl">Permitir</td>
+						<td class="tg-kcps"><span style="color:#000;background-color:#FFF">192.168.2.0/26</span></td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl">192.168.1.18-19</td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl"></td>
+						<td class="tg-kcps"><span style="color:#000;background-color:#FFF">Acceso a S. Dpto Atención cliente</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-7zrl">Lan -- Servidor (I)</td>
+						<td class="tg-2b7s">28</td>
+						<td class="tg-7zrl">Permitir</td>
+						<td class="tg-kcps"><span style="color:#000;background-color:#FFF">192.168.1.128/26</span></td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl">192.168.1.4</td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl"></td>
+						<td class="tg-7zrl">G. Transformación digital accede a servidor desarrollo</td>
+					  </tr>
+					  <tr>
+						<td class="tg-7zrl">Lan -- Servidor (I)</td>
+						<td class="tg-2b7s">29</td>
+						<td class="tg-7zrl">Permitir</td>
+						<td class="tg-kcps"><span style="color:#000;background-color:#FFF">192.168.1.128/26</span></td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl">192.168.1.5</td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl"></td>
+						<td class="tg-7zrl">G. Transformación digital accede a servidor prueba</td>
+					  </tr>
+					  <tr>
+						<td class="tg-7zrl">Lan -- Servidor (I)</td>
+						<td class="tg-2b7s">30</td>
+						<td class="tg-7zrl">Permitir</td>
+						<td class="tg-7zrl">192.168.1.64/26</td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl">192.168.1.11-12</td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl"></td>
+						<td class="tg-7zrl">Gerencia E.Clientes acceso a S. Dpto Marketing</td>
+					  </tr>
+					  <tr>
+						<td class="tg-7zrl">Lan -- Servidor (I)</td>
+						<td class="tg-2b7s">31</td>
+						<td class="tg-7zrl">Permitir</td>
+						<td class="tg-kcps"><span style="color:#000;background-color:#FFF">192.168.1.64/26</span></td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-kcps"><span style="color:#000;background-color:#FFF">192.168.1.13-16</span></td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl"></td>
+						<td class="tg-kcps"><span style="color:#000;background-color:#FFF">Gerencia E.Clientes acceso a S. Dpto Economia</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-7zrl">Lan -- Servidor (I)</td>
+						<td class="tg-2b7s">32</td>
+						<td class="tg-7zrl">Permitir</td>
+						<td class="tg-kcps"><span style="color:#000;background-color:#FFF">192.168.1.64/26</span></td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-kcps"><span style="color:#000;background-color:#FFF">192.168.1.17</span></td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl"></td>
+						<td class="tg-kcps"><span style="color:#000;background-color:#FFF">Gerencia E.Clientes acceso a S. Dpto Abogacia</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-7zrl">Lan -- Servidor (I)</td>
+						<td class="tg-2b7s">33</td>
+						<td class="tg-7zrl">Permitir</td>
+						<td class="tg-kcps"><span style="color:#000;background-color:#FFF">192.168.1.64/26</span></td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl">192.168.1.18-19</td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl"></td>
+						<td class="tg-kcps"><span style="color:#000;background-color:#FFF">Gerencia E.Clientes acceso a S. Dpto Atención cliente</span></td>
+					  </tr>
+					  <tr>
+						<td class="tg-7zrl">Lan -- Servidor (I)</td>
+						<td class="tg-2b7s">34</td>
+						<td class="tg-7zrl"></td>
+						<td class="tg-kcps"></td>
+						<td class="tg-7zrl"></td>
+						<td class="tg-7zrl"></td>
+						<td class="tg-7zrl"></td>
+						<td class="tg-7zrl"></td>
+						<td class="tg-kcps"></td>
+					  </tr>
+					  <tr>
+						<td class="tg-7zrl"></td>
+						<td class="tg-2b7s">35</td>
+						<td class="tg-7zrl">Rechazar</td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl">*</td>
+						<td class="tg-7zrl"></td>
+						<td class="tg-7zrl">Rechazar cualquier otra conexión</td>
+					  </tr>
+					</tbody>
+					</table>
 		
 
 	</p>

@@ -7,7 +7,7 @@
 	</head>
 <body>
 	<div class="encabezado">
-		<p> <img class="imagen" src="/Imagenes/UNI.png"></p>
+		<p> <img class="imagen" src="../Imagenes/UNI.png"></p>
 	</div>
 	<div class="curso">
         <p> <br><br><br>
@@ -312,619 +312,7 @@
 		<h1 class="titulo"> Red WAN</h1>
 		<p> La conexión entre las sedes sera por Red WAN entre ellas y a traves de internet como una segunda red de soporte.  </p>
 	</div>
-	<!-- Diseño de la Topologia Logica -->
-	<h1 class="titulo"> Diseño de la red  </h1>
-	<p> La red de cada sede será una red LAN </p>
-	<!-- Diseño de la red en Sede Central -->
-	<p>La sede central tendrá la siguiente dirección red : 192.168.0.0 con máscara : 255.255.192.0</p>
-	<div>
-		<table id="tabla"   border="2px solid black" >
-			<tr>
-				<th>Nro</th>
-				<th>Nombre</th>
-				<th>Nodos</th>
-				<th>Bloque <br> CIDR</th>
-				<th>Tamaño</th>
-				<th>Direccion <br> de Red</th>
-				<th>Máscara</th>
-				<th>Primera IP utilizable</th>
-				<th>Última IP utilizable</th>
-				<th>Dirección broadcast</th>
-			</tr>
-				<!-- Sede Central -->
-				<tr>
-					<td>1</td> 
-					<td>Departamento <br> de economia</td> 
-					<td>8</td>
-					<td>/25</td>
-					<td>126</td>
-					<td>192.168.0.0</td> 
-					<td>255.255.255.128</td> 
-					<td>192.168.0.1</td>
-					<td>192.168.0.126</td>
-					<td>192.168.0.127</td>
-				</tr>
-				<tr>
-					<td>2</td> 
-					<td>Oficinas de apoyo <br> a las gerencias</td> 
-					<td>14</td>
-					<td>/25</td>
-					<td>126</td>
-					<td>192.168.0.128</td> 
-					<td>255.255.255.128</td> 
-					<td>192.168.0.129</td>
-					<td>192.168.0.254</td>
-					<td>192.168.0.255</td>
-				</tr>
-				<tr>
-					<td>3</td> 
-					<td>Firewall 1<br>-<br>Servidores</td> 
-					<td>31</td>
-					<td>/26</td>
-					<td>62</td>
-					<td>192.168.1.0</td> 
-					<td>255.255.255.192</td> 
-					<td>192.168.1.1</td>
-					<td>192.168.1.62</td>
-					<td>192.168.1.63</td>
-				</tr>
-				<tr>
-					<td>4</td> 
-					<td>Gerencias de estrategias <br> de clientes</td> 
-					<td>12</td>
-					<td>/26</td>
-					<td>62</td>
-					<td>192.168.1.64</td> 
-					<td>255.255.255.192</td> 
-					<td>192.168.1.65</td>
-					<td>192.168.1.126</td>
-					<td>192.168.1.127</td>
-				</tr>
-				<tr>
-					<td>5</td> 
-					<td>Gerencia de transformacion <br>digital </td> 
-					<td>8</td>
-					<td>/26</td>
-					<td>62</td>
-					<td>192.168.1.128</td> 
-					<td>255.255.255.192</td> 
-					<td>192.168.1.129</td>
-					<td>192.168.1.190</td>
-					<td>192.168.1.191</td>
-				</tr>
-				<tr>
-					<td>6</td> 
-					<td>Departamento <br> de marketing</td> 
-					<td>4</td>
-					<td>/26</td>
-					<td>62</td>
-					<td>192.168.1.192</td> 
-					<td>255.255.255.192</td> 
-					<td>192.168.1.193</td>
-					<td>192.168.1.254</td>
-					<td>192.168.1.255</td>
-				</tr>
-				<tr>
-					<td>7</td> 
-					<td>Departamento de atención <br> al cliente</td> 
-					<td>4</td>
-					<td>/26</td>
-					<td>62</td>
-					<td>192.168.2.0</td> 
-					<td>255.255.255.192</td> 
-					<td>192.168.1.1</td>
-					<td>192.168.1.62</td>
-					<td>192.168.1.63</td>
-				</tr>
-				<tr>
-					<td>8</td> 
-					<td>Departamento de desarrollo <br> y mantenimiento </td> 
-					<td>6</td>
-					<td>/27</td>
-					<td>30</td>
-					<td>192.168.2.64</td> 
-					<td>255.255.255.224</td> 
-					<td>192.168.2.65</td>
-					<td>192.168.2.94</td>
-					<td>192.168.2.95</td>
-				</tr>
-				<tr>
-					<td>9</td> 
-					<td>Gerencia <br> general</td> 
-					<td>6</td>
-					<td>/27</td>
-					<td>30</td>
-					<td>192.168.2.96</td> 
-					<td>255.255.255.224</td> 
-					<td>192.168.2.97</td>
-					<td>192.168.2.126</td>
-					<td>192.168.2.127</td>
-				</tr>
-				<tr>
-					<td>10</td> 
-					<td>Departamento de <br> sistemas y red</td> 
-					<td>4</td>
-					<td>/27</td>
-					<td>30</td>
-					<td>192.168.2.128</td> 
-					<td>255.255.255.224</td> 
-					<td>192.168.2.129</td>
-					<td>192.168.2.158</td>
-					<td>192.168.2.159</td>
-				</tr>
-				<tr>
-					<td>11</td> 
-					<td>Departamento de abogacia <br> de la empresa</td> 
-					<td>2</td>
-					<td>/27</td>
-					<td>30</td>
-					<td>192.168.2.160</td> 
-					<td>255.255.255.224</td> 
-					<td>192.168.2.161</td>
-					<td>192.168.2.190</td>
-					<td>192.168.2.191</td>
-				</tr>
-				<tr>
-					<td>12</td> 
-					<td>R.Sede Central <br>-<br> R.Estrategia Empresariales</td> 
-					<td>2</td>
-					<td>/30</td>
-					<td>2</td>
-					<td>192.168.2.192</td> 
-					<td>255.255.255.252</td>
-					<td>192.168.2.193</td>
-					<td>192.168.2.194</td>
-					<td>192.168.2.195</td>
-				</tr>
-				<tr>
-					<td>13</td> 
-					<td>R.Sede Central <br> - <br> R.servicios infomaticos</td> 
-					<td>2</td>
-					<td>/30</td>
-					<td>2</td>
-					<td>192.168.2.196</td> 
-					<td>255.255.255.252</td> 
-					<td>192.168.2.197</td>
-					<td>192.168.2.198</td>
-					<td>192.168.2.199</td>
-				</tr>
-				<tr>
-					<td>14</td> 
-					<td>R.Sede Central <br>- <br> R.Gerencias</td> 
-					<td>2</td>
-					<td>/30</td>
-					<td>2</td>
-					<td>192.168.2.200</td> 
-					<td>255.255.255.252</td> 
-					<td>192.168.2.201</td>
-					<td>192.168.2.202</td>
-					<td>192.168.2.203</td>
-				</tr>
-				<tr>
-					<td>15</td> 
-					<td>R.Sede Central <br>- <br>Firewall 1</td> 
-					<td>2</td>
-					<td>/30</td>
-					<td>2</td>
-					<td>192.168.2.204</td> 
-					<td>255.255.255.252</td> 
-					<td>192.168.2.205</td>
-					<td>192.168.2.206</td>
-					<td>192.168.2.207</td>
-				</tr>
-				<tr>
-					<td>16</td> 
-					<td>R.Sede Central <br>- <br> Firewall 2</td> 
-					<td>2</td>
-					<td>/30</td>
-					<td>2</td>
-					<td>192.168.2.208</td> 
-					<td>255.255.255.252</td> 
-					<td>192.168.2.209</td>
-					<td>192.168.2.210</td>
-					<td>192.168.2.211</td>
-				</tr>
-				<tr>
-					<td>15</td> 
-					<td>Firewall 2 <br>- <br>R.Border</td> 
-					<td>2</td>
-					<td>/30</td>
-					<td>2</td>
-					<td>192.168.2.212</td> 
-					<td>255.255.255.252</td> 
-					<td>192.168.2.213</td>
-					<td>192.168.2.214</td>
-					<td>192.168.2.215</td>
-				</tr>			
-		</table>
-	</div>
-	<!-- Diseño de la red en Sede Atención al cliente -->
-	<p>La sede atención al cliente tendrá la siguiente dirección red : 192.168.64.0 con máscara : 255.255.192.0</p>
-	<div>
-		<table id="tabla"   border="2px solid black" >
-			<tr>
-				<th>Nro</th>
-				<th>Nombre</th>
-				<th>Nodos</th>
-				<th>Bloque <br> CIDR</th>
-				<th>Tamaño</th>
-				<th>Direccion <br> de Red</th>
-				<th>Máscara</th>
-				<th>Primera IP utilizable</th>
-				<th>Última IP utilizable</th>
-				<th>Dirección broadcast</th>
-			</tr>
-				<!-- Sede Atención al cliente -->
-				<tr>
-					<td>1</td> 
-					<td>Departamento de soluciones <br> técnicas</td> 
-					<td>8</td>
-					<td>/25</td>
-					<td>126</td>
-					<td>192.168.64.0</td> 
-					<td>255.255.255.128</td> 
-					<td>192.168.64.1</td>
-					<td>192.168.64.126</td>
-					<td>192.168.64.127</td>
-				</tr>
-				<tr>
-					<td>2</td> 
-					<td>Departamento de atención <br> a usuarios </td> 
-					<td>6</td>
-					<td>/26</td>
-					<td>62</td>
-					<td>192.168.64.128</td> 
-					<td>255.255.255.192</td> 
-					<td>192.168.64.129</td>
-					<td>192.168.64.190</td>
-					<td>192.168.64.191</td>
-				</tr>
-				<tr>
-					<td>3</td> 
-					<td>Departamento de empresas</td> 
-					<td>4</td>
-					<td>/26</td>
-					<td>62</td>
-					<td>192.168.64.192</td> 
-					<td>255.255.255.192</td> 
-					<td>192.168.64.193</td>
-					<td>192.168.64.254</td>
-					<td>192.168.64.255</td>
-				</tr>
-				<tr>
-					<td>4</td> 
-					<td>Departamento de nuevos <br> clientes</td> 
-					<td>4</td>
-					<td>/26</td>
-					<td>62</td>
-					<td>192.168.65.0</td> 
-					<td>255.255.255.192</td> 
-					<td>192.168.65.1</td>
-					<td>192.168.65.62</td>
-					<td>192.168.65.63</td>
-				</tr>
-				<tr>
-					<td>5</td> 
-					<td>Departamento de seguimiento <br> de clientes </td> 
-					<td>4</td>
-					<td>/26</td>
-					<td>62</td>
-					<td>192.168.65.64</td> 
-					<td>255.255.255.192</td> 
-					<td>192.168.65.65</td>
-					<td>192.168.65.126</td>
-					<td>192.168.65.127</td>
-				</tr>
-				<tr>
-					<td>6</td> 
-					<td>Departamento de recursos <br> humanos de areas</td> 
-					<td>4</td>
-					<td>/26</td>
-					<td>62</td>
-					<td>192.168.65.128</td> 
-					<td>255.255.255.192</td> 
-					<td>192.168.65.129</td>
-					<td>192.168.65.190</td>
-					<td>192.168.65.191</td>
-				</tr>
-				<tr>
-					<td>7</td> 
-					<td>Departamento de recursos <br> humanos de alto nivel</td> 
-					<td>2</td>
-					<td>/27</td>
-					<td>30</td>
-					<td>192.168.65.192</td> 
-					<td>255.255.255.224</td> 
-					<td>192.168.65.193</td>
-					<td>192.168.65.222</td>
-					<td>192.168.65.223</td>
-				</tr>
-				<tr>
-					<td>8</td> 
-					<td>Firewall 1 <br>- <br> Servidores</td> 
-					<td>2</td>
-					<td>/29</td>
-					<td>6</td>
-					<td>192.168.65.224</td> 
-					<td>255.255.255.248</td> 
-					<td>192.168.65.225</td>
-					<td>192.168.65.230</td>
-					<td>192.168.65.231</td>
-				</tr>
-				<tr>
-					<td>9</td> 
-					<td>Departamento de seguimiento <br> de clientes </td> 
-					<td>4</td>
-					<td>/30</td>
-					<td>2</td>
-					<td>192.168.65.232</td> 
-					<td>255.255.255.252</td> 
-					<td>192.168.65.233</td>
-					<td>192.168.65.234</td>
-					<td>192.168.65.235</td>
-				</tr>
-				<tr>
-					<td>10</td> 
-					<td>R.Atencion Cliente <br>- <br> R.Servicio Empresariales</td> 
-					<td>2</td>
-					<td>/30</td>
-					<td>2</td>
-					<td>192.168.65.236</td> 
-					<td>255.255.255.252</td> 
-					<td>192.168.65.237</td>
-					<td>192.168.65.238</td>
-					<td>192.168.65.239</td>
-				</tr>
-				<tr>
-					<td>11</td> 
-					<td>R.Atencion Cliente <br> - <br> R.Usuario</td> 
-					<td>2</td>
-					<td>/30</td>
-					<td>2</td>
-					<td>192.168.65.240</td> 
-					<td>255.255.255.252</td> 
-					<td>192.168.65.241</td>
-					<td>192.168.65.242</td>
-					<td>192.168.65.243</td>
-				</tr>
-				<tr>
-					<td>12</td> 
-					<td>R.Atencion Cliente <br>- <br> R.Recursos Humanos</td> 
-					<td>2</td>
-					<td>/30</td>
-					<td>2</td>
-					<td>192.168.65.244</td> 
-					<td>255.255.255.252</td> 
-					<td>192.168.65.245</td>
-					<td>192.168.65.246</td>
-					<td>192.168.65.247</td>
-				</tr>
-				<tr>
-					<td>13</td> 
-					<td>Firewall <br> - <br> R.Border</td> 
-					<td>2</td>
-					<td>/30</td>
-					<td>2</td>
-					<td>192.168.65.248</td> 
-					<td>255.255.255.252</td> 
-					<td>192.168.65.249</td>
-					<td>192.168.65.250</td>
-					<td>192.168.65.251</td>
-				</tr>
-				<tr>
-					<td>14</td> 
-					<td>R.Atención Cliente <br> - <br> Firewall</td> 
-					<td>2</td>
-					<td>/30</td>
-					<td>2</td>
-					<td>192.168.65.252</td> 
-					<td>255.255.255.252</td> 
-					<td>192.168.65.253</td>
-					<td>192.168.65.254</td>
-					<td>192.168.65.255</td>
-				</tr>
-				<tr>
-					<td>14</td> 
-					<td>R.Atención cliente <br> - <br> Firewall 1</td> 
-					<td>2</td>
-					<td>/30</td>
-					<td>2</td>
-					<td>192.168.66.0</td> 
-					<td>255.255.255.252</td> 
-					<td>192.168.65.1</td>
-					<td>192.168.65.2</td>
-					<td>192.168.65.3</td>
-				</tr>
-							
-		</table>
-	</div>
-	<!-- Diseño de la red en Sede Trujillo -->
-	<p>La sede atención al Sede Trujillo tendrá la siguiente dirección red : 192.168.128.0 con máscara : 255.255.192.0</p>
-	<div>
-		<table id="tabla"   border="2px solid black" >
-			<tr>
-				<th>Nro</th>
-				<th>Nombre</th>
-				<th>Nodos</th>
-				<th>Bloque <br> CIDR</th>
-				<th>Tamaño</th>
-				<th>Direccion <br> de Red</th>
-				<th>Máscara</th>
-				<th>Primera IP utilizable</th>
-				<th>Última IP utilizable</th>
-				<th>Dirección broadcast</th>
-			</tr>
-				<!-- Sede Trujillo-->
-				<tr>
-					<td>1</td> 
-					<td>Departamento de seguimiento <br> de clientes </td> 
-					<td>4</td>
-					<td>/26</td>
-					<td>62</td>
-					<td>192.168.128.0</td> 
-					<td>255.255.255.192</td> 
-					<td>192.168.128.1</td>
-					<td>192.168.128.62</td>
-					<td>192.168.128.63</td>
-				</tr>
-				<tr>
-					<td>2</td> 
-					<td>Departamento de marketing</td> 
-					<td>2</td>
-					<td>/27</td>
-					<td>30</td>
-					<td>192.168.128.64</td> 
-					<td>255.255.255.224</td> 
-					<td>192.168.128.65</td>
-					<td>192.168.128.94</td>
-					<td>192.168.128.95</td>
-				</tr>
-				<tr>
-					<td>3</td> 
-					<td>Departamento de Economia</td> 
-					<td>2</td>
-					<td>/27</td>
-					<td>30</td>
-					<td>192.168.128.96</td> 
-					<td>255.255.255.224</td> 
-					<td>192.168.128.97</td>
-					<td>192.168.128.126</td>
-					<td>192.168.128.127</td>
-				</tr>
-				<tr>
-					<td>4</td> 
-					<td>Departamento de abogacia <br> de la empresa </td> 
-					<td>2</td>
-					<td>/27</td>
-					<td>30</td>
-					<td>192.168.128.128</td> 
-					<td>255.255.255.224</td> 
-					<td>192.168.128.129</td>
-					<td>192.168.128.158</td>
-					<td>192.168.128.159</td>
-				</tr>
-				<tr>
-					<td>5</td> 
-					<td>Departamento de atencion <br>  al cliente </td> 
-					<td>2</td>
-					<td>/27</td>
-					<td>30</td>
-					<td>192.168.128.160</td> 
-					<td>255.255.255.255.224</td> 
-					<td>192.168.128.161</td>
-					<td>192.168.128.190</td>
-					<td>192.168.128.191</td>
-				</tr>
-				<tr>
-					<td>6</td> 
-					<td>Departamento de informatica</td> 
-					<td>2</td>
-					<td>/27</td>
-					<td>30</td>
-					<td>192.168.128.192</td> 
-					<td>255.255.255.224</td> 
-					<td>192.168.128.193</td>
-					<td>192.168.128.222</td>
-					<td>192.168.128.223</td>
-				</tr>
-				<tr>
-					<td>7</td> 
-					<td>Departamento de empresas</td> 
-					<td>2</td>
-					<td>/27</td>
-					<td>30</td>
-					<td>192.168.128.224</td> 
-					<td>255.255.255.224</td> 
-					<td>192.168.128.225</td>
-					<td>192.168.128.254</td>
-					<td>192.168.128.255</td>
-				</tr>
-				<tr>
-					<td>8</td> 
-					<td>Departamento de clientes</td> 
-					<td>2</td>
-					<td>/27</td>
-					<td>30</td>
-					<td>192.168.129.0</td> 
-					<td>255.255.255.224</td> 
-					<td>192.168.129.1</td>
-					<td>192.168.129.30</td>
-					<td>192.168.129.31</td>
-				</tr>
-				<tr>
-					<td>9</td> 
-					<td>Firewall 1 <br>- <br> Servidores</td> 
-					<td>1</td>
-					<td>/29</td>
-					<td>6</td>
-					<td>192.168.129.32</td> 
-					<td>255.255.255.248</td> 
-					<td>192.168.129.33</td>
-					<td>192.168.129.38</td>
-					<td>192.168.129.39</td>
-				</tr>
-				<tr>
-					<td>10</td> 
-					<td>R.Trujillo <br>- <br> R.Jefatura</td> 
-					<td>2</td>
-					<td>/30</td>
-					<td>2</td>
-					<td>192.168.129.40</td> 
-					<td>255.255.255.252</td> 
-					<td>192.168.129.41</td>
-					<td>192.168.129.42</td>
-					<td>192.168.129.43</td>
-				</tr>
-				<tr>
-					<td>11</td> 
-					<td>R.Trujillo <br> - <br> R.Estrategia Empresariales</td> 
-					<td>2</td>
-					<td>/30</td>
-					<td>2</td>
-					<td>192.168.129.44</td> 
-					<td>255.255.255.252</td> 
-					<td>192.168.129.45</td>
-					<td>192.168.129.46</td>
-					<td>192.168.129.47</td>
-				</tr>
-				<tr>
-					<td>12</td> 
-					<td>R.Trujillo <br>- <br> Firewall</td> 
-					<td>2</td>
-					<td>/30</td>
-					<td>2</td>
-					<td>192.168.129.48</td> 
-					<td>255.255.255.252</td> 
-					<td>192.168.129.49</td>
-					<td>192.168.129.50</td>
-					<td>192.168.129.51</td>
-				</tr>
-				<tr>
-					<td>13</td> 
-					<td>R.Trujillo <br>- <br> Firewall 1</td> 
-					<td>2</td>
-					<td>/30</td>
-					<td>2</td>
-					<td>192.168.129.52</td> 
-					<td>255.255.255.252</td> 
-					<td>192.168.129.53</td>
-					<td>192.168.129.54</td>
-					<td>192.168.129.55</td>
-				</tr>
-				<tr>
-					<td>14</td> 
-					<td>Firewall <br>- <br> R.Border</td> 
-					<td>2</td>
-					<td>/30</td>
-					<td>2</td>
-					<td>192.168.129.56</td> 
-					<td>255.255.255.252</td> 
-					<td>192.168.129.57</td>
-					<td>192.168.129.58</td>
-					<td>192.168.129.59</td>
-				</tr>			
-		</table>
-	</div>
+
 	<!-- Diseño de la RED VLAN -->
 	<div class="vlan" >
 		<h1 class="titulo">Diseño de vlan</h1>
@@ -1093,32 +481,13 @@
 			</table>
 	</div>
 
-	<div>
-		<h1 class="titulo"> Vlan </h1>
-		<p>	Cada departamento está en un subred diferente. Para una mayor escalabilidad se optó por usar vlan para cada subred. Para ello se usó un switch de capa 3 (por cada área) encargado de asignar los vlan y del enrutamiento inter-vlan.</p>
-		<p> Como ejemplo se va ha mostrar las configuraciones realizadas en el área de atenciones empresariales de la sede atención al cliente. </p>
-		<h2> Vlan por área </h2>
-		<img src="../Imagenes/vlan/vlan-Area-Atencion-SE.png"/>
-		<h2> Interfaces Vlan </h2>
-		<img src="../Imagenes/vlan/interfaces-vlan.png"/>
-		<h2> Enrutamiento entre vlan </h2>
-		<img src="../Imagenes/vlan/iprouting.png"/>
-		<h2> Conexión entre vlan 110 y 130 </h2>
-		<img src="../Imagenes/vlan/comprobacion.png"/>
+	
+	
 
-	</div>
-	<!-- Spanning Tree -->
-	<div>
-		<h1 class="titulo"> Spanning tree </h1>
-
-	</div>
-	<!-- VPN -->
-	<div>
-		<h1 class="titulo"> VPN </h1>
-	</div>
-	</div>
 	<!-- Implementación  -->
-	<div>
+
+
+	
 	<h1 class="titulos"> Implementación </h1>
 	<!-- Protocolos de enrutamiento  -->
 	<div class=" Enrrutamiento_Dinamico">
@@ -1176,11 +545,60 @@
 			<h1 class="titulo"> Protocolos de seguridad</h1>
 			<ul>
 				<li> Firewall</li>
-				<li> Proxy</li>
-				<li>Snort</li>
+		<div class="Servicios">
+			<h1 class="titulo"> Servicios Ofrecidos </h1>
+			<ul>
+				<li> Servicio DDNS</li>
+				<li> Servicio DHCP</li>
+				<li> Servicio Web</li>
+				<li> Servicio FTP</li>
+				<li> Servicio de correo</li>
+				<li> Servicio de acceso Remoto</li>
 			</ul>
 		</div>
+		<!-- Protocolos de seguridad -->
+		<div class="Protocolos_de_Seguridad">
+			<h1 class="titulo"> Protocolos de seguridad</h1>
+			<ul>
+				<li> Firewall</li>
+			</ul>
+		</div>
+
+		<div class="Servicios">
+			<h1 class="titulo"> Servicios Ofrecidos </h1>
+			<ul>
+				<li> Servicio DDNS</li>
+				<li> Servicio DHCP</li>
+				<li> Servicio Web</li>
+				<li> Servicio FTP</li>
+				<li> Servicio de correo</li>
+				<li> Servicio de acceso Remoto</li>
+			</ul>
+		</div>
+		
+		
+	<!-- Pruebas -->
+	<div>
+		<h1 class="titulos"> Pruebas</h1>
+		<ul>
+			<li>Pruebas de conexión</li>
+			<li>Análisis de trafico</li>
+		</ul>
 	</div>
+</body>
+</html>
+
+	<!-- Pruebas -->
+	<div>
+		<h1 class="titulos"> Pruebas</h1>
+		<ul>
+			<li>Pruebas de conexión</li>
+			<li>Análisis de trafico</li>
+		</ul>
+	</div>
+</body>
+</html>
+
 	<!-- Pruebas -->
 	<div>
 		<h1 class="titulos"> Pruebas</h1>

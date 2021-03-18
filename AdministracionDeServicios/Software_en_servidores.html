@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="encabezado">
-        <p> <img class="imagen" src="/Imagenes/UNI.png"></p>
+        <p> <img class="imagen" src="../Imagenes/UNI.png"></p>
     </div>
     <div class="curso">
         <p> <br><br><br>
@@ -21,6 +21,89 @@
     </div> 
     <hr>
     <!-- fin de encabezado -->
+    <div id="FTP">
+        <h2>Servidor FTP</h2>
+        <p>FTP (siglas en inglés de File Transfer Protocol, ‘Protocolo de Transferencia de Archivos’), 
+            es un protocolo de red para la transferencia de archivos entre sistemas interconectados o<br>
+             enlazados a Internet, basado en la arquitectura cliente-servidor. Desde un equipo cliente 
+             se puede conectar a un servidor para descargar archivos desde él o para enviarle archivos,<br>
+             independientemente del sistema operativo utilizado en cada equipo.</p><br>
+        <p> Para este servicio de un servidor FTP alojado en el DMZ de la organización se utilizó una máquina virtual Centos7 con un 4 GB de RAM , se instaló el paquete vsftpd para la transferencia de archivos de un host a otro. Las configuraciones que se hicieron fue permitir que host anonimos se conecten al servidor . </p>
+        <img src="../Imagenes/servidorFTP/ftpconf.png" />
+        <p> Para que un cliente se pueda conectar al servicio web es necesario que del servidor ftp se permita el servicio ftp</p>
+        <img src="../Imagenes/servidorFTP/ftpfirewll.png" />
+        <p>En nuestra pc prueba se mostrará lo siguiente , el usuario que permite es el propio root del servidor</p>
+        <img src="../Imagenes/servidorFTP/pruebaftp.png" />
+        <img src="../Imagenes/servidorFTP/pruebaftp2.png" />
+
+
+        
+    </div>
     
+    <div id="WEB">
+        <h2> Servidor Web </h2>
+        <p>
+            Almacena todos los archivos propios de una página web (texto, imagen, vídeo, etc.) 
+            y los muestra a los clientes a través de los navegadores. Utiliza el protocolo HTTP<br>
+             (Hipertext Transfer Protocol).El espacio que proporcionan estos servidores para alojar 
+             tu propio sitio web se denomina hosting.<br>
+        </p>
+         <p>Para este servicio de un servidor web alojado en el DMZ de la organización se uilizo una máquina virtual Centos7 con un 4 GB de RAM , se instaló el paquete httpd y por defecto llama los recursos que se encuentran alojados en /var/www/html . En esa carpeta alojamos un index.html.</p> 
+        <img src="../Imagenes/servidorweb/index.png " />
+        <p>Para que un cliente se pueda conectar al servicio web es necesario que del servidor web habilitemos con firewalld.
+        </p>
+        <img src="../Imagenes/servidorweb/firewall_off_servidor.png " />
+        <p>En nuestra pc prueba se vera lo siguiente cuando en un navegador busquemos la IP del servidor web.</p>
+        <img src="../Imagenes/servidorweb/prueba.png " />
+    </div>
+
+    <div id="SMTP">
+        <h2> Servidor SMTP </h2>
+        <p>
+            También conocido como Mail Server, es un ordenador que envía, recibe y almacena los mensajes
+            de correo electrónico o emails.<br>
+            A su vez, se dividen en servidores POP3 y servidores SMTP. Los primeros almacenan los correos
+             entrantes y lo sirven al usuario cuando se conecta. Los segundos se encargan de enviar el<br>
+              correo saliente. Existe un tercer tipo que son los servidores IMAP, que permiten
+               administrar el correo electrónico sin necesidad de descargarlo en tu ordenador o en<br>
+                un gestor de correo.
+        </p>>
+        <p>
+            Para instalar el servidor SMTP se instaló los paquetes sendmail, sendmail-cf , dovecot  y squirrelmail. Y apagamos el servicio postfix y renombramos el hostname.
+        </p>
+        <p>
+            En el archivo /etc/dovecot/dovecot.conf habilitamos los protocolos IMAP y pop3.
+        </p>
+        <p> En el archivo /etc/dovecot/conf.d/10-mail.conf  agregamos la linea mail_location = <b>
+            "mail_location = mbox: ~/mail:INBOX=/var/mail/%u"</b>  
+        </p>
+        <p>
+            En el archivo /etc/dovecot/conf.d/10-auth.conf activamos disable_plaintext_auth = yes.
+        </p>
+        <p>
+            En el archivo /etc/mail/sendmail.mc agregamos  <b> DAEMON_OPTIONS (“port=smtp, Name=MTA”)dn1 </b>
+        </p>
+        <p>
+            Ejecutamos en el terminal :  <b> m4 /etc/mail/sendmail.mc > /etc/mail/sendmail.cf</b>
+        </p>
+        <p>
+            Ahora pasaremos a configurar squirrelmail :
+            <ul>
+                <li>/etc/mail/local-host-names agregamos nuestro hostname</li>
+                <li> /etc/mail/Access agrega una linea <b> Connect: hostname RELAY</b></li>
+            </ul>
+        </p>
+        <p>
+            Activamos los servicios:
+             <ul>
+                 <li>systemctl start httpd </li>
+                 <li>systemctl start sendmail.service </li>
+                 <li> systemctl start dovecot.service</li>
+             </ul>
+        </p>
+        <p> Nos conectamos desde una máquina prueba en su buscador favorito como 
+            <b> http://192.168.220/webmail</b>
+        </p>
+    </div>
 </body>
 </html>

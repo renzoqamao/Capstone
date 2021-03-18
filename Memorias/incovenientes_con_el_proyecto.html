@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="encabezado">
-        <p> <img class="imagen" src="/Imagenes/UNI.png"></p>
+        <p> <img class="imagen" src="../Imagenes/UNI.png"></p>
     </div>
     <div class="curso">
         <p> <br><br><br>
@@ -21,6 +21,31 @@
     </div> 
     <hr>
     <!-- fin de encabezado -->
-    
+    <<h1 class="titulos">Incovenientes con el estudio del proyecto </h1>
+    <p>
+        <b>Implementación de una Red WAN en GNS3:</b><br><br>
+        Debido a las diversas conexiones remotas de la sede Trujillo con la Sede Central, hubo algunos<br>
+        inconvenientes a la hora de enviar paquetes, debido a la seguridad y otros requisitos, se opto por<br>
+        implementar la VPN entre la Sede Central y Sede Trujillo.
+
+    </p>
+    <p>
+        <b>Ubicación de los Servidores:</b><br><br>
+        Debido a que son varios los servicios ofrecidos, se presentaron inconvenientes a la hora de ubicar<br>
+        los servidores de tal manera que no esten expuestos. Se solucionó modificando la topología y agregando<br>
+        firewalls ubicados estratégicamente.
+    </p>
+    <p>
+        <b>Acceso a internet:</b><br><br>
+        Uso de NAT en el router general y para que el software(GNS3) tenga conexión real a internet se tiene <br>
+        que instalar un adaptador de red para poder compartir el acceso a internet (Adaptador de bucle invertido).
+    </p>
+    <p>
+        <b>  Enrrutamiento por BGP quagga </b> <br> <br>
+        La maquina virtual de firewall no distribuye las rutas BGP de servicio de quagga . El servidor bloquea todo lo que sale del datacenter.
+    </p>
+    <p>
+        <b> Muchos servicios en maquinas virtuales y multiples proyectos gns3 no es recomendable en una sola maquina y pueden sufrir daños en el proyecto mismo.</b>
+    </p>
 </body>
 </html>

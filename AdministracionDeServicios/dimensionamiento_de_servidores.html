@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="encabezado">
-        <p> <img class="imagen" src="/Imagenes/UNI.png"></p>
+        <p> <img class="imagen" src="../Imagenes/UNI.png"></p>
     </div>
     <div class="curso">
         <p> <br><br><br>
@@ -21,8 +21,61 @@
     </div> 
     <hr>
     <!-- fin de encabezado -->
+    <center>
     <div>
-        <img src="/Imagenes/" alt="">
+        <h1>Dimensionamiento de Servidores</h1>
+        <p>
+            Los elementos a considerar para dimensionar un servidor,
+            son el microprocesadentro, memmoria RAM, disco duro,<br> 
+            tarjeta de red, entre otros. Así como también se tiene 
+            en cuenta otros elementos ajenos al proppio servidor,<br> 
+            como las instalaciones de red o el número de clientes 
+            conectados. Los servidores con los que cuenta toda la red<br>
+            en general, son: FTP Server, Web Server, Mail Server, 
+            Servidor de Prueba y Desarrollo, Servidores para el Área<br> 
+            de Gerencias y Servidores para el Área de Estrategias Empresariales, 
+            así como tambien un Servidor DHCP - DDNS,<br> 
+            el cual se describe a continuación.
+        </p>
+        <br>
+        <h3>Servidor DHCP-DDNS</h3>
+        <p>
+            1. Ubicación del servidor: Rack<br><br>
+            2. Función del servidor: Asignar IPs de manera dinámica solicitada por los clientes,<br>
+            traducir IPs a un nombre característico del dominio y viceversa.<br><br>
+            3. Número de usuarios concurrentes que se conectaran al servidor: 50-100<br><br>
+            4. Número de procesadores del servidor: 1 Procesador<br><br>
+            5. Velocidad del procesador: 2.5 GHz<br><br>
+            6. Modelo del procesador: 7 core<br><br>
+            7. Memoria RAM: 4 GB<br><br>
+            8. Tipo de Disco Duro: SATA<br><br>
+            9. Capacidad de Disco Duro: 15 GB<br><br>
+            10. Sistema Operativo: Centos 7<br><br>
+            11. Puertos de red (Ethernet): 1<br><br>
+            12. Switch conectado: 1<br><br>
+            13. Número de puertos del switch: 10<br>
+        </p>
+        <p>
+            Para evitar problemas con el rendimiento del Servidor se 
+            ha considerado lo siguiente:<br>
+            Del propio cliente: comprobar características de éste si 
+            son las mínimas recomendadas para la solución, ocupación<br>
+             de memoria, disco, CPU, etc. De la red: monitorización 
+             con aplicaciones específicas para ello. Del propio servidor:<br>
+              disco, porcentaje de CPU ocupada, limitación de memoria, etc.<br><br>
+
+            Finalmente, si se ha de optar por sobredimensionar una
+             instalación con el sobrecoste que conlleva para disponer<br> 
+             de una aplicación rápida frente a una instalación más modesta
+            con el fin de ahorrar costes con la consiguiente disminución<br>
+             del rendimiento de la aplicación, siempre será preferible 
+             la elección de un sistema algo sobredimensionado en características,<br> 
+            pero siempre que éstas sean acordes al precio.
+            Los demás tienen dimensiones similiares por lo que se ha<br> 
+            omitido su descripción.
+        </p>
+        
     </div>
+    </center>
 </body>
 </html>
